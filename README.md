@@ -23,30 +23,30 @@ Digging changes the battlefield. Open a direct route for resources and you may a
 
 ## Gameplay in motion
 
-These short captures come from the playable Windows build. They show the current underground loop in motion: moving through the facility, reading the tactical map and resource state, and responding when a route turns hostile.
+These captures use the August 13, 2026 gameplay build. They show the underground map, the expanded loadout, a brood-carrier warning, and a weapon response in the tunnels.
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <p><strong>01 / DIG, BUILD, SURVIVE</strong></p>
-      <img src="assets/showcase/dig-build-survive.gif" width="100%" alt="Crawl Brawl gameplay moving through an excavated underground corridor while the tactical map, equipment, and incoming-hostile warning remain visible." />
-      <p><em>Track a tunnel network, manage equipment, and respond to a breach warning.</em></p>
+      <p><strong>01 / TRACK THE BROOD CARRIER</strong></p>
+      <img src="assets/showcase/dig-build-survive.gif" width="100%" alt="Latest Crawl Brawl gameplay build showing the Security Core room, a brood-carrier warning, expanded equipment bar, and tracked facility map." />
+      <p><em>Read the facility map and act on an incoming brood-carrier warning.</em></p>
     </td>
     <td width="50%" valign="top">
-      <p><strong>02 / THE FACILITY UNDER PRESSURE</strong></p>
-      <img src="assets/showcase/breach-response.gif" width="100%" alt="Crawl Brawl gameplay in a resource-rich underground room, with the player, tactical map, ammunition, and build controls visible." />
-      <p><em>Move between sectors and use the live HUD to read the state of the expedition.</em></p>
+      <p><strong>02 / HOLD THE TUNNELS</strong></p>
+      <img src="assets/showcase/breach-response.gif" width="100%" alt="Latest Crawl Brawl gameplay build showing the player using a fire weapon in the tunnels, with loadout, resources, and facility map visible." />
+      <p><em>Switch weapons and meet the threat inside the underground network.</em></p>
     </td>
   </tr>
 </table>
 
-<p align="center"><strong>FIELD CAPTURES / AUGUST 2026</strong><br />The footage is from active development and shows the game as it currently plays.</p>
+<p align="center"><strong>LATEST GAMEPLAY CAPTURE / AUGUST 13, 2026</strong><br />Footage from an active development build. Systems and presentation may change.</p>
 
 <table>
   <tr>
-    <td width="33%" valign="top"><img src="assets/showcase/core-room.jpg" width="100%" alt="Underground core room with the Security Core, player, resource readout, and tactical map." /><p align="center"><strong>CORE ROOM</strong><br />Read the facility and its resources.</p></td>
-    <td width="33%" valign="top"><img src="assets/showcase/tunnel-network.jpg" width="100%" alt="Excavated underground passage with the player, sector layout, equipment bar, and hostile warning." /><p align="center"><strong>TUNNEL NETWORK</strong><br />Shape the routes through the complex.</p></td>
-    <td width="33%" valign="top"><img src="assets/showcase/combat-response.jpg" width="100%" alt="Combat encounter in an underground corridor with the player aiming, equipment slots, and hostile warning." /><p align="center"><strong>BREACH RESPONSE</strong><br />Fight when the perimeter gives way.</p></td>
+    <td width="33%" valign="top"><img src="assets/showcase/core-room.jpg" width="100%" alt="Security Core room, defensive layout, current loadout, and facility map from the August 13 gameplay build." /><p align="center"><strong>COMMAND POST</strong><br />The core and its defenders under threat.</p></td>
+    <td width="33%" valign="top"><img src="assets/showcase/tunnel-network.jpg" width="100%" alt="Branching underground passage with tracked map, equipment bar, and brood-carrier warning." /><p align="center"><strong>UNDERGROUND ROUTES</strong><br />Navigate the connected tunnel network.</p></td>
+    <td width="33%" valign="top"><img src="assets/showcase/combat-response.jpg" width="100%" alt="Fire weapon effect in an underground tunnel, with the player loadout and facility map visible." /><p align="center"><strong>WEAPON RESPONSE</strong><br />Use the loadout to meet a tunnel threat.</p></td>
   </tr>
 </table>
 
