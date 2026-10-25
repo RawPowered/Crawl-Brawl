@@ -1,7 +1,0 @@
-{
-  "godot_exe": "C:\\tmp\\godot-4.7.1\\Godot_v4.7.1-stable_win64.exe",
-  "telemetry": true,
-  "validate_before_play": true,
-  "build_version": "BV5",
-  "auto_snapshot_after_clean_run": false
-}

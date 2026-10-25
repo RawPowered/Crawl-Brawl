@@ -64,7 +64,7 @@ The two projects show different stages of the same design journey. Crawl Brawl i
 - Main scene: `scenes/main.tscn`
 - Windows build: run `Build Windows Beta.bat` with Godot 4.7.1 available. The script prepares export templates when needed, imports project resources, builds the standalone game, and packages player instructions and third-party notices.
 
-The repository includes the Godot project, gameplay source, runtime assets, build instructions, and focused development tests. Generated caches, local saves, video-editing material, and previous builds are excluded.
+The repository includes the Godot project, gameplay source, runtime assets, and Windows build instructions. The standalone beta is available from Releases. No saved games are included in the repository or release package.
 
 ## Project notes
 
