@@ -49,6 +49,21 @@ Beta 0.1 includes portable realm saves, recovery backups, and the latest include
 
 See [README_PLAYER.txt](README_PLAYER.txt) for save locations and migration information. Saves are stored under `%APPDATA%\Crawl Brawl\saves` on Windows.
 
+## Provisional Windows system targets
+
+These are starting targets for the Beta, not measured minimums. The game has only been exercised on a high-end test PC, so performance on the proposed minimum hardware still needs confirmation.
+
+|  | Minimum target | Recommended target |
+| --- | --- | --- |
+| Operating system | Windows 10 or 11, 64-bit | Windows 10 or 11, 64-bit |
+| Processor | Intel Core i5-8400 or AMD Ryzen 3 3100, or similar | Intel Core i5-12400 or AMD Ryzen 5 5600, or similar |
+| Memory | 8 GB RAM | 16 GB RAM |
+| Graphics | NVIDIA GeForce GTX 1050 2 GB or AMD Radeon RX 560, current driver with OpenGL 3.3 support | NVIDIA GeForce GTX 1660 or AMD Radeon RX 6600, with current drivers |
+| Display | 1280×720 | 1920×1080 |
+| Storage | 1 GB free | SSD with 2 GB free |
+
+The known test PC has an Intel Core i9-13900K, NVIDIA GeForce RTX 4080 with 16 GB VRAM, 128 GB RAM, and Windows 11. This is far above the proposed targets and does not establish minimum performance. Crawl Brawl uses Godot's Compatibility renderer, which supports OpenGL 3.3, but engine compatibility alone does not guarantee smooth performance in this game's simulation. We have not verified a minimum frame rate on the target systems.
+
 ## From the underground to Civilian 66
 
 Crawl Brawl was the first game in this creative direction. Its playable story stays underground. When I had found the setting and understood the direction I wanted to take, I stopped expanding the story here and carried that work into Civilian 66. Civilian 66 develops the journey beyond the underground, including how the player reaches the surface and what the above-ground story becomes.
