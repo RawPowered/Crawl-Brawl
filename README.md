@@ -21,6 +21,35 @@ Digging changes the battlefield. Open a direct route for resources and you may a
 
 **Dig. Build. Survive.**
 
+## Gameplay in motion
+
+These short captures come from the playable Windows build. They show the current underground loop in motion: moving through the facility, reading the tactical map and resource state, and responding when a route turns hostile.
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <p><strong>01 / DIG, BUILD, SURVIVE</strong></p>
+      <img src="assets/showcase/dig-build-survive.gif" width="100%" alt="Crawl Brawl gameplay moving through an excavated underground corridor while the tactical map, equipment, and incoming-hostile warning remain visible." />
+      <p><em>Track a tunnel network, manage equipment, and respond to a breach warning.</em></p>
+    </td>
+    <td width="50%" valign="top">
+      <p><strong>02 / THE FACILITY UNDER PRESSURE</strong></p>
+      <img src="assets/showcase/breach-response.gif" width="100%" alt="Crawl Brawl gameplay in a resource-rich underground room, with the player, tactical map, ammunition, and build controls visible." />
+      <p><em>Move between sectors and use the live HUD to read the state of the expedition.</em></p>
+    </td>
+  </tr>
+</table>
+
+<p align="center"><strong>FIELD CAPTURES / AUGUST 2026</strong><br />The footage is from active development and shows the game as it currently plays.</p>
+
+<table>
+  <tr>
+    <td width="33%" valign="top"><img src="assets/showcase/core-room.jpg" width="100%" alt="Underground core room with the Security Core, player, resource readout, and tactical map." /><p align="center"><strong>CORE ROOM</strong><br />Read the facility and its resources.</p></td>
+    <td width="33%" valign="top"><img src="assets/showcase/tunnel-network.jpg" width="100%" alt="Excavated underground passage with the player, sector layout, equipment bar, and hostile warning." /><p align="center"><strong>TUNNEL NETWORK</strong><br />Shape the routes through the complex.</p></td>
+    <td width="33%" valign="top"><img src="assets/showcase/combat-response.jpg" width="100%" alt="Combat encounter in an underground corridor with the player aiming, equipment slots, and hostile warning." /><p align="center"><strong>BREACH RESPONSE</strong><br />Fight when the perimeter gives way.</p></td>
+  </tr>
+</table>
+
 ## Playable Windows package
 
 The latest release contains a standalone Windows build. Godot does not need to be installed to play.
