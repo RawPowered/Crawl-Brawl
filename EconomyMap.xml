@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<economy version="BV3">
+  <loop id="wall_salvage" name="Biome Wall Economy">
+    <source>scripts/phase0_run.gd::_update_mining</source>
+    <rules>systems/biome_wall_economy.gd</rules>
+    <inventory>systems/operator_loadout.gd</inventory>
+    <outputs>placeable biome block,recycled raw material,direct wall sale</outputs>
+    <anti_loop>player-placed walls do not award mining scrap, mineral discovery, or new natural-wall salvage</anti_loop>
+  </loop>
+  <loop id="materials" name="Material Processing">
+    <inventory>systems/material_economy.gd</inventory>
+    <facility>systems/foundry_unit.gd</facility>
+    <flow>raw material -> foundry recipe -> refined component -> fabrication or processed sale</flow>
+  </loop>
+  <loop id="construction" name="Construction Progression">
+    <pricing>systems/upgrade_economy.gd</pricing>
+    <runtime>scripts/phase0_run.gd</runtime>
+    <flow>research -> kit fabrication -> inventory stack -> placement -> upgrade</flow>
+    <doorway>heavy_doorway persistent unlock key; MK1 industry research/craft path; centralized doorway upgrade economy; click/tap footprint or F-hold toggles open/closed through _toggle_doorway with blocker, flow, visual, and save synchronization</doorway>
+  </loop>
+  <loop id="liquidation" name="Player Choice">
+    <raw>contract refinery for full value or immediate raw sale at reduced value</raw>
+    <walls>recycle into biome feedstock or sell directly for credits</walls>
+    <processed>sell refined stock or retain it for upgrades and fabrication</processed>
+  </loop>
+  <biomes>
+    <biome id="tunnel" primary="granite" secondary="copper_ore" purpose="stone blocks and early bronze construction" />
+    <biome id="hive" primary="basalt" secondary="sulfur" purpose="reinforced blocks and explosives" />
+    <biome id="bunker" primary="granite" secondary="iron_ore" purpose="stone and steel fortifications" />
+    <biome id="crystal" primary="quartz" secondary="energy_crystal" purpose="optic and crystal technology" />
+    <biome id="foundry" primary="iron_ore" secondary="coal" purpose="steel production and foundry fuel" />
+    <biome id="sulfur" primary="sulfur" secondary="coal" purpose="explosive compound production" />
+    <biome id="iron" primary="iron_ore" secondary="titanium_ore" purpose="steel and late armor plating" />
+  </biomes>
+</economy>

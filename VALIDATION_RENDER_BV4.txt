@@ -1,0 +1,6 @@
+BV4_STATIC_VALIDATION 50/50 passed
+{
+  "passed": 50,
+  "total": 50,
+  "failed": []
+}

@@ -1,0 +1,93 @@
+Crawl Brawl BV5.7 Static Validation
+===================================
+Baseline: BV5-DEV009
+Baseline archive: CrawlBrawl_BV5_DEV009_SOURCE_20260822_1858.zip
+Baseline SHA256: 208114afd74c2256e8568498acc8d142570958239ffe8390f1fb2a7f30a29444
+
+DEV009 runtime evidence
+-----------------------
+Godot: 4.7.1-stable (official)
+Uptime: 203,721 ms
+Frame samples: 9,200
+Frames >=25 ms: 542 (5.89%)
+Frames >=33 ms: 312 (3.39%)
+Peak frame: 150.0 ms
+Mining samples: 1,516
+Mining frames >=25 ms: 15 (0.99%)
+Mining commit peak: 678 us
+Open-cell peak: 86 us
+Mutation queue peak: 94 us
+Terrain draw samples: 353
+Terrain draw >=8 ms: 353 (100%)
+Terrain draw peak: 42,081 us
+Lighting draw peak: 45,758 us
+Ecology update peak: 53,919 us
+Enemy update peak: 62,004 us
+Enemy peak: 36
+Streaming update peak: 5,675 us
+Render regions peak: 12
+Simulation regions peak: 25
+
+Interpretation used for BV5.7
+-----------------------------
+- Mining mutation cost is already sub-millisecond; the visible mining hitch is surrounding frame workload.
+- The hard 12/25 render/simulation envelopes are working.
+- Terrain, lighting and ecology each retain 40-50 ms-class peaks and may stack in one display frame.
+- The user observed the new-game growth/exploration window was too short before threat became overwhelming.
+- Therefore BV5.7 targets opening threat pacing and heavy-phase isolation rather than another regional routing rewrite.
+
+Static validation
+-----------------
+72/72 gates passed.
+
+PASS changed production GDScript files retain all existing function signatures, including static functions
+PASS no duplicate function names in changed production/test files
+PASS changed GDScript files pass lexical scan
+PASS EnVars/SysMap.xml parses
+PASS EnVars/VarMap.xml parses
+PASS RuntimeComponentMap.xml parses
+PASS main SAVE_VERSION remains 14
+PASS Hive Awareness nested payload advances to schema 2 with restore defaults
+PASS awareness thresholds are long-horizon [0,8,18,32,50,72,100,132,168]
+PASS first hunting party requires at least 3 surveyed regions
+PASS early scout cadence requires 2 additional surveyed regions
+PASS early hunting party starts at 4 contacts and global party quota caps at 18
+PASS early encounter recovery reaches 70 seconds
+PASS brood milestones delayed to awareness tiers II/IV/VI/VIII
+PASS brood incubation is 90 seconds
+PASS world ecology authority is 10 Hz with one maximum step per display frame
+PASS ecology yields to a pending visible terrain raster
+PASS lighting yields on both terrain-raster and ecology-authority frames
+PASS run bootstrap performs no synchronous decorative-region cache build
+PASS live streaming performs no eager decorative cache service
+PASS lean terrain bypasses formation cache generation
+PASS lean terrain uses owned 24x24 region bounds
+PASS lean terrain uses reduced material selection path
+PASS wall-edge drawing reuses cardinal adjacency instead of redundant 8-neighbor scans
+PASS lighting consumes cached props and cannot synthesize them in the draw callback
+PASS ambient mote spacing is reduced from 40 px to 64 px
+PASS per-ecology-subphase performance telemetry exists
+PASS pacing-state telemetry exists
+PASS open-world hunting-party entry interval is slower than legacy delivery cadence
+PASS BV5.7 regression is registered
+PASS SysMap/VarMap document the new authority and scheduler state
+
+Runtime gate pending
+--------------------
+Godot 4.7.1 is not installed in this execution environment. The user's native launcher must run:
+1. Validate Build / import-parse gate.
+2. Regression batch, including open_world_pacing_bv57_test.gd.
+3. A representative new-game exploration/mining/building session followed by combat.
+4. Normal exit so diagnostics/LAST_SESSION.json is written for DEV010 comparison.
+
+Expected DEV010 gates
+---------------------
+- render_regions_peak <= 12
+- simulation_regions_peak <= 25
+- frames >=33 ms materially below DEV009's 312 / 9,200 (3.39%)
+- mining_commit_peak_us remains <1,000
+- terrain draw peak materially below 42,081 us and >=8 ms rate materially below 100%
+- lighting does not stack with terrain raster/ecology authority work by contract
+- ecology peak materially below 53,919 us, or new subphase telemetry identifies the remaining offender
+- first normal hunting party requires multiple early contacts, starts at 4, and receives a ~70 s early recovery window
+- first remote brood milestone does not occur before Hive Awareness tier II

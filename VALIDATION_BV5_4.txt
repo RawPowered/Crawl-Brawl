@@ -1,0 +1,44 @@
+Crawl Brawl BV5.4 Static Validation
+===================================
+Baseline: BV5-DEV006
+Baseline SHA256: 29482f618731454c8098d428035f7076d3d0f9a95d139b32f7897f91cda64762
+
+DEV006 diagnostic evidence:
+- frame samples: 12,478
+- frames >=25ms: 3,993 (32.0%)
+- frames >=33ms: 3,802 (30.5%)
+- frame peak: 150.0ms
+- mining samples: 5,641
+- mining frames >=25ms: 107 (1.9%)
+- mining commit peak: 320us
+- open cell peak: 92us
+- mutation queue peak: 77us
+- flow_ok: 0
+- no_flow/greedy: 7,396 / 7,396
+- local route build/reuse: 922 / 6,474
+- stall recovery: 246
+- foot aim blocked: 5,422
+- render regions peak: 66
+- simulation regions peak: 69
+
+Static gates:
+PASS existing function signatures preserved in phase0_run.gd
+PASS existing function signatures preserved in world_grid.gd
+PASS existing function signatures preserved in gameplay_telemetry.gd
+PASS existing function signatures preserved in run_world_presentation.gd
+PASS SysMap.xml parses
+PASS VarMap.xml parses
+PASS SAVE_VERSION remains 14
+PASS corridor preload does not call schedule_region_window
+PASS MAX_RENDER_REGIONS = 36
+PASS MAX_SIMULATION_REGIONS = 49
+PASS base/lane/carrier regional fields use terrain-only rebuild
+PASS blocker footprint maps to structure index+1
+PASS explicit flow breach telemetry path present
+PASS structure changes do not enqueue terrain regional-flow rebuilds
+PASS enemy occupancy probe uses squared distance
+PASS mining flow rebuild is deferred while cutter is active
+PASS streaming_siege_bv54_test registered in regression batch
+
+Pending gate:
+- Godot 4.7.1 import/runtime and regression execution on the complete local project.

@@ -1,0 +1,40 @@
+# Godot editor cache and generated imports
+.godot/
+
+# Local saves and player data
+saves/
+save_archive/
+
+# Build outputs, exports, and old package archives
+builds/
+dist/
+exports/
+.VIDEO-DIST/
+~.OLD.VERSIONS/
+*.exe
+*.pck
+*.zip
+*.7z
+
+# Video review frames and generated captures
+tmp_frames/
+.tmp_video_review/
+assets/art/debug_video_frames/
+assets/debug_video_frames/
+debug_video_frames/
+
+# Local settings, credentials, and generated project data
+.cursor/
+EnVars/
+artifacts/
+diagnostics/
+logs/
+tools/cache/
+tools/__pycache__/
+.pytest_cache/
+*.log
+*.tmp
+*.patch
+*.bak
+.regression_out.txt
+regression_out.txt

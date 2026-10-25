@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "project": "Crawl Brawl",
+  "hotfix": "BV5.2",
+  "baseline_snapshot": "BV5-DEV003",
+  "baseline_sha256": "f97b51c620d72c890d0e4af418debb3a5e4002afa05cc2f9eb97c13a36e8965e",
+  "save_version": 14,
+  "scope": [
+    "mob routing stability",
+    "route-cache invalidation cost",
+    "mining mutation/lighting pacing",
+    "regression coverage"
+  ],
+  "runtime_assets_changed": false,
+  "files": [
+    {
+      "path": "scripts/phase0_run.gd",
+      "sha256": "82e6a82142b6b15179c1e94738a47b52a83dc3e433978a9643a148c858d028fb",
+      "bytes": 674197
+    },
+    {
+      "path": "systems/world_grid.gd",
+      "sha256": "6d96011023367bdee161bc99852e4bad9fb485e69337df66ef600f0b68c2efa3",
+      "bytes": 110328
+    },
+    {
+      "path": "systems/run_components/run_world_presentation.gd",
+      "sha256": "e4ba14da30faaf0b9fbed2235d06e9c4a930e85f4969f4a39feb05f0370102f4",
+      "bytes": 79045
+    },
+    {
+      "path": "tests/run_regression_batch.gd",
+      "sha256": "dba20a8d4f59ea65c99a2c403b0054a2797c1159000a997294edc22ff5d7e527",
+      "bytes": 4390
+    },
+    {
+      "path": "tests/mob_routing_stability_bv52_test.gd",
+      "sha256": "9288a5fa1fc13115cd9bf95c1ae2cd30e01fd7cb9e73d315d13d0591e0d90312",
+      "bytes": 4177
+    },
+    {
+      "path": "EnVars/SysMap.xml",
+      "sha256": "585989e67e7abbc2abff032b5473735dcd81456dce9d0ea3b606133ff91f7ca5",
+      "bytes": 25531
+    },
+    {
+      "path": "EnVars/VarMap.xml",
+      "sha256": "0f5e675d04cbc068de371c3d5b1f3f97827c323ebea277106d415502ed5786e9",
+      "bytes": 29561
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "a36df5f35795cce3465bdab4a252c099376c6e311e3ad30c5c42406bac2f858c",
+      "bytes": 60099
+    },
+    {
+      "path": "README_STABILITY_BV5_2.md",
+      "sha256": "56ecaf24e6baf22173258d9ff331c9c316180a95603fa906f8bd7c094a0a2128",
+      "bytes": 3706
+    },
+    {
+      "path": "VALIDATION_BV5_2.txt",
+      "sha256": "277207e6ce6d65b04a24cebaddf55066aefdde97d6bdc3511dccf90a5d03c678",
+      "bytes": 1328
+    }
+  ]
+}

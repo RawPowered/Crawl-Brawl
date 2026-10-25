@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "project": "Crawl Brawl",
+  "patch": "BV5.7 Opening Pacing + Frame Phase Isolation",
+  "baseline": {
+    "snapshot": "BV5-DEV009",
+    "archive": "CrawlBrawl_BV5_DEV009_SOURCE_20260822_1858.zip",
+    "sha256": "208114afd74c2256e8568498acc8d142570958239ffe8390f1fb2a7f30a29444"
+  },
+  "main_save_version": 14,
+  "hive_awareness_payload_version": 2,
+  "runtime_validation": "pending local Godot 4.7.1 launcher validation",
+  "scope": [
+    "protect early exploration/build pacing",
+    "delay and reduce early hunting-party pressure",
+    "delay brood ecology escalation",
+    "isolate terrain/ecology/lighting heavy phases",
+    "remove synchronous startup decorative cache build",
+    "reduce lean terrain raster cost",
+    "add pacing and ecology-subphase diagnostics"
+  ],
+  "files": [
+    "scripts/phase0_run.gd",
+    "systems/hive_awareness.gd",
+    "systems/difficulty_profile.gd",
+    "systems/gameplay_telemetry.gd",
+    "systems/run_components/run_world_presentation.gd",
+    "systems/run_components/run_hud_presentation.gd",
+    "EnVars/SysMap.xml",
+    "EnVars/VarMap.xml",
+    "tests/hive_awareness_test.gd",
+    "tests/biome_scout_alert_test.gd",
+    "tests/continuous_breather_test.gd",
+    "tests/open_world_pacing_bv56_test.gd",
+    "tests/open_world_pacing_bv57_test.gd",
+    "tests/run_regression_batch.gd",
+    "CHANGELOG.md",
+    "README_PERFORMANCE_BV5_7.md",
+    "VALIDATION_BV5_7.txt",
+    "BV5_7_HOTFIX_MANIFEST.json"
+  ]
+}

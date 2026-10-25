@@ -1,0 +1,18 @@
+{
+  "project": "Crawl Brawl",
+  "hotfix": "BV5.5",
+  "name": "Frame Budget + Flow-Step Commitment",
+  "baseline": "BV5-DEV007",
+  "baseline_sha256": "d3dafa7d5018675bf3272fd2808fcf9b9e6fb5776b52141aa2933b1ebba77e48",
+  "save_version": 14,
+  "scope": [
+    "hard render/simulation budgets",
+    "prepare-vs-simulation ownership",
+    "same-cell regional flow-step commitment",
+    "render-only visual cache building",
+    "runtime phase telemetry"
+  ],
+  "asset_changes": false,
+  "economy_changes": false,
+  "progression_changes": false
+}

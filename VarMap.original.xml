@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<variables>
+	<var name="flow_dirty_regions" scope="phase0_run" used_by="_on_terrain_cell_opened,_flow_allowed_regions,_rebuild_base_flows,_update_enemies,_mark_flow_dirty_for_structure_cell" />
+	<var name="_GREEDY_CARDINAL_DIRECTIONS" scope="phase0_run" used_by="_greedy_step_toward,_cell_routing_openness,_best_greedy_neighbor" />
+	<var name="_GREEDY_DIAGONAL_DIRECTIONS" scope="phase0_run" used_by="_greedy_step_toward,_best_greedy_neighbor" />
+	<var name="_cell_routing_openness" scope="phase0_run" used_by="_best_greedy_neighbor,_recover_stuck_spider" />
+	<var name="_pick_flow_route_cell" scope="phase0_run" used_by="_update_enemies,ranked_passable_neighbors" />
+	<var name="player_flow_region" scope="phase0_run" used_by="_update_enemies,_rebuild_base_flows" />
+	<var name="_enemy_blocked_cells" scope="phase0_run" used_by="_cell_blocks_enemy,_rebuild_enemy_blocker_cache,_mark_flow_dirty_for_structure_cell" />
+	<var name="TERRAIN_FLOW_REBUILD_DELAY" scope="phase0_run" used_by="_mark_flow_dirty_for_structure_cell,_update_terrain_debounce,_service_spider_routing_flow_refresh" default="0.9" />
+	<var name="realm_height" scope="phase0_run" used_by="realm_save,_resolve_realm_dimensions,_apply_realm_upscale_to_save,_saved_realm_dimensions" />
+	<var name="score" scope="phase0_run" used_by="expedition_hud,pause_summary,realm_save" />
+	<var name="expedition_xp" scope="phase0_run" used_by="command_core_progress_tab,realm_save,pause_summary,level_reconcile,expedition_hud" />
+	<var name="player_style_id" scope="phase0_run" used_by="player_armor,style_tab,realm_save,pause_summary" />
+	<var name="player_strength_multiplier" scope="phase0_run" used_by="player_armor,_weapon_damage_scale,style_tab" />
+	<var name="player_defense_multiplier" scope="phase0_run" used_by="player_armor,_hurt_player,style_tab" />
+	<var name="skill_points" scope="phase0_run" used_by="progression_tree,command_core_progress_tab,command_core_base_tab,defenses_sentry_upgrade,frontier_core_upgrade,personal_base_upgrade,realm_save,pause_summary,upgrade_economy" />
+	<var name="skill_unlocks" scope="phase0_run" used_by="progression_tree,command_core_progress_tab,realm_save" />
+	<var name="realm_save_cooldown" scope="phase0_run" used_by="realm_save,realm_archive_panel,ARCHIVE_SAVE_COOLDOWN" />
+	<var name="structure.cooldown" scope="Structure" used_by="foundry,sentry" />
+	<var name="structure.level" scope="Structure" used_by="personal_base,foundry,heavy_doorway,turrets" />
+	<var name="checkpoint_exists" scope="phase0_run" used_by="realm_save,personal_base,death_respawn" />
+	<var name="checkpoint_position" scope="phase0_run" used_by="realm_save,personal_base,death_respawn" />
+	<var name="checkpoint_base_id" scope="phase0_run" used_by="realm_save,personal_base,death_respawn,base_network" />
+	<var name="checkpoint_generation" scope="phase0_run" used_by="realm_save,recovery_journal" />
+	<var name="checkpoint_slots" scope="phase0_run" used_by="realm_save,realm_archive_panel,_commit_realm_save_to_slot,_activate_checkpoint_slot" />
+	<var name="structure.foundry_state.coal_fuel" scope="Structure" used_by="foundry_unit,realm_save" />
+	<var name="encounters_completed" scope="phase0_run" used_by="_start_encounter,_update_hive_progression_for_encounter,NEST_MILESTONE_ENCOUNTERS,_establish_brood_nest,_reconcile_legacy_brood_nests" />
+	<var name="ENCOUNTER_FLOW_GRACE" scope="phase0_run" used_by="_start_encounter,_finalize_encounter_start" default="0.45" />
+	<var name="BOOT_REGION_PRELOAD_CAP" scope="phase0_run" used_by="_ready" default="2" />
+	<var name="spawns_remaining" scope="phase0_run" used_by="wave_spawn,wave_director" />
+	<var name="wave_active" scope="phase0_run" used_by="wave_spawn,expedition_hud" />
+	<var name="spawn_cap_stall_elapsed" scope="phase0_run" used_by="_update_encounter_delivery,_recall_wave_stragglers" />
+	<var name="wave_reroute_elapsed" scope="phase0_run" used_by="_update_encounter_delivery,_reposition_unreachable_wave_spiders" />
+	<var name="_terrain_preloaded" scope="phase0_run" used_by="accept_load_handoff,_ready,_load_run" />
+	<var name="_pending_suit_alert" scope="phase0_run" used_by="accept_load_handoff,_ready" />
+	<var name="_load_handoff" scope="phase0_run" used_by="accept_load_handoff,main" />
+	<var name="WORLD_LOAD_BUDGET" scope="world_load" used_by="bulk_materialize_prepare_zone,world_load_screen" />
+	<var name="EXTERIOR_HORIZON_CELLS" scope="world_load" used_by="enqueue_exterior_horizon_prefetch" default="100" />
+	<var name="EXTERIOR_ENQUEUE_CAP" scope="world_load" used_by="enqueue_exterior_horizon_prefetch" />
+	<var name="generator_version" scope="phase0_run" used_by="realm_save,_validate_generator_contract,_restore_terrain_from_save,world_load" />
+	<var name="operator_loadout" scope="phase0_run" used_by="operator_loadout,kit_count,grant_kit,_draw_hotbar,_finalize_loadout_from_save,realm_save" />
+	<var name="operator_onboard" scope="phase0_run" used_by="_update_onboard,realm_save,_ready,_finalize_loadout_from_save" />
+	<var name="gameplay_telemetry" scope="phase0_run" used_by="_ready,_process,_update_enemies,_request_spider_routing_flow_refresh,_service_spider_routing_flow_refresh,_notification" />
+	<var name="CRAWL_BRAWL_TELEMETRY" scope="env" used_by="Play Crawl Brawl.bat,gameplay_telemetry.configure_from_environment" />
+	<var name="CRAWL_BRAWL_TELEMETRY_LOG" scope="env" used_by="Play Crawl Brawl.bat,gameplay_telemetry.configure_from_environment" default="logs/gameplay_telemetry.ndjson" />
+	<var name="route_flow_ok" scope="gameplay_telemetry" used_by="note_flow_ok,_emit_snapshot" />
+	<var name="route_dead_end" scope="gameplay_telemetry" used_by="note_dead_end,_emit_snapshot" />
+	<var name="route_greedy" scope="gameplay_telemetry" used_by="note_greedy,_emit_snapshot" />
+	<var name="route_no_flow" scope="gameplay_telemetry" used_by="note_no_flow,_emit_snapshot" />
+	<var name="route_refresh_request" scope="gameplay_telemetry" used_by="note_refresh_request,_emit_snapshot" />
+	<var name="route_refresh_batch" scope="gameplay_telemetry" used_by="note_refresh_batch,_emit_snapshot" />
+	<var name="route_stall_recover" scope="gameplay_telemetry" used_by="note_stall_recover,_emit_snapshot" />
+	<var name="route_foot_aim_blocked" scope="gameplay_telemetry" used_by="note_foot_aim_blocked,_emit_snapshot" />
+	<var name="enemies_peak" scope="gameplay_telemetry" used_by="tick,_emit_snapshot" />
+	<var name="build_intent" scope="phase0_run" used_by="_update_build_mode,_update_weapon_selection,_select_build_slot,_cycle_weapon" />
+	<var name="build_mode" scope="phase0_run" used_by="_update_build_mode,_draw_targeting,_handle_use_action" />
+	<var name="onboard_step" scope="operator_onboard" used_by="realm_save,_update_onboard,_load_run" />
+	<var name="COMBAT_UI_RANGE" scope="phase0_run" used_by="_hostile_near,_update_onboard" default="180" />
+	<var name="placeable_blocks" scope="phase0_run" used_by="placeable_blocks,_place_block_from_hotbar,_draw_rock_cell,realm_save" />
+	<var name="torch_starter_issued" scope="phase0_run" used_by="_issue_starter_torch_if_needed,realm_save" />
+	<var name="controls_remap_seen" scope="phase0_run" used_by="_finalize_loadout_from_save,realm_save" />
+	<var name="hotbar_index" scope="operator_loadout" used_by="_update_weapon_selection,_draw_hotbar,_hotbar_active_stack" />
+	<var name="holster_guns" scope="operator_loadout" used_by="cycle_holster,_draw_hotbar,ensure_weapon,realm_save" />
+	<var name="holster_index" scope="operator_loadout" used_by="cycle_holster,_hotbar_can_mine,_hotbar_holds_weapon,_draw_hotbar" />
+	<var name="STACK_MAX" scope="operator_loadout" used_by="add_stacks,grant_kit" default="99" />
+	<var name="TORCH_LIGHT_POOL_BUDGET" scope="phase0_run" used_by="_draw_atmosphere" default="16" />
+	<var name="SAVE_VERSION" scope="phase0_run" used_by="realm_save,_save_run,_load_run" default="14" />
+	<var name="SAVE_SCHEMA" scope="realm_save" used_by="RealmSave,phase0_run" default="14" />
+	<var name="terrain_delta_count" scope="phase0_run" used_by="realm_save,_restore_terrain_from_save" />
+	<var name="GENERATOR_VERSION" scope="world_grid" used_by="realm_save,_validate_generator_contract,restore_visited_regions_for_load" />
+	<var name="INITIAL_PREPARE_SIZE" scope="world_grid" used_by="configure_prepare_zone,prepare_zone_region_list,bulk_materialize_prepare_zone" default="1000" />
+	<var name="EXPANSION_EDGE_THRESHOLD" scope="world_grid" used_by="try_expand_prepare_zone" default="100" />
+	<var name="EXPANSION_STEP" scope="world_grid" used_by="try_expand_prepare_zone" default="500" />
+	<var name="_prepared_cell_bounds" scope="world_grid" used_by="configure_prepare_zone,prepared_cell_bounds,try_expand_prepare_zone,_region_intersects_prepared_bounds" />
+	<var name="_prepare_zone_regions_cache" scope="world_grid" used_by="prepare_zone_region_list,_rebuild_prepare_zone_region_list" />
+	<var name="ensure_region_for_cell" scope="world_grid" used_by="_prefetch_travel_regions,_update_visible_render_window,activate_render_window_for_bounds" />
+	<var name="activate_render_window_for_bounds" scope="world_grid" used_by="_update_visible_render_window,_ensure_boot_render_window" />
+	<var name="_uses_authored_bedrock_rim" scope="world_grid" used_by="_apply_realm_bedrock_rim,_is_bedrock_rim,generate_realm" />
+	<var name="_stream_window_regions" scope="world_grid" used_by="schedule_region_window,stream_window_regions,compute_desired_render_regions,apply_render_window,activate_render_window,activate_render_window_for_bounds,try_expand_prepare_zone,_sync_terrain_chunk_layers" />
+	<var name="_region_preload_delta" scope="world_grid" used_by="process_region_preload_budget,take_region_preload_delta,_update_region_streaming" />
+	<var name="_last_stream_regions" scope="phase0_run" used_by="_sync_terrain_chunk_layers,_stream_regions_changed" />
+	<var name="terrain_chunk_redraw_queue" scope="phase0_run" used_by="_queue_terrain_region_redraw,_flush_terrain_chunk_redraws,_flush_mining_terrain_chunks,_prune_terrain_redraw_queue,_sync_terrain_chunk_layers,_bootstrap_stream_visuals,_queue_visual_redraw" />
+	<var name="_boot_terrain_drain_active" scope="phase0_run" used_by="_bootstrap_stream_visuals,_queue_visual_redraw,_draw_terrain_chunk" default="false" />
+	<var name="_terrain_chunk_draw_lean" scope="phase0_run" used_by="_draw_terrain_chunk,_draw_floor_cell,_draw_rock_cell,_draw_floor_macro_block,_draw_rock_macro_block" default="false" />
+	<var name="BOOT_TERRAIN_FLUSH_BUDGET" scope="phase0_run" used_by="_bootstrap_stream_visuals" default="1" />
+	<var name="BOOT_TERRAIN_DRAIN_BUDGET" scope="phase0_run" used_by="_queue_visual_redraw" default="1" />
+	<var name="BOOT_TERRAIN_DRAIN_UNTIL" scope="phase0_run" used_by="_bootstrap_stream_visuals,_queue_visual_redraw" default="3" />
+	<var name="TERRAIN_LEAN_QUEUE_THRESHOLD" scope="phase0_run" used_by="_should_lean_terrain_chunk_draw" default="1" />
+	<var name="terrain_chunk_lean_pending" scope="phase0_run" used_by="_redraw_terrain_chunk_region,_draw_terrain_chunk" note="lean flag captured before queue erase" />
+	<var name="PLAYER_FLOW_REGION_CAP" scope="phase0_run" used_by="_refresh_player_flow,_rebuild_base_flows" default="5" />
+	<var name="FAR_NEST_REGION_SCAN_CAP" scope="phase0_run" used_by="_choose_far_brood_nest_site" default="4" />
+	<var name="FAR_NEST_CANDIDATE_CAP" scope="phase0_run" used_by="_choose_far_brood_nest_site" default="6" />
+	<var name="FAR_NEST_SITE_CHECK_CAP" scope="phase0_run" used_by="_choose_far_brood_nest_site" default="24" />
+	<var name="_pending_far_nest_milestone" scope="phase0_run" used_by="_apply_encounter_nest_milestones,_update_pending_far_nest_retry,_spawn_far_brood_nest,_finish_far_brood_nest_establish" />
+	<var name="_far_nest_retry_cooldown" scope="phase0_run" used_by="_apply_encounter_nest_milestones,_update_pending_far_nest_retry" />
+	<var name="_far_nest_retry_attempts" scope="phase0_run" used_by="_update_pending_far_nest_retry,_spawn_far_brood_nest,_choose_far_brood_nest_site" />
+	<var name="_pick_far_nest_in_region" scope="phase0_run" used_by="_choose_far_brood_nest_site" />
+	<var name="GUARDIAN_SUMMON_PACK" scope="phase0_run" used_by="_update_enemies" default="3" />
+	<var name="NEST_REGISTER_RETRY_COOLDOWN" scope="phase0_run" used_by="_update_brood_nests" default="1.0" />
+	<var name="BroodNest.register_retry_cooldown" scope="BroodNest" used_by="_update_brood_nests" />
+	<var name="flow_epoch" scope="phase0_run" used_by="_rebuild_base_flows,_refresh_player_flow,_spider_route_viable_light" />
+	<var name="Spider.route_flow_epoch" scope="Spider" used_by="_spider_route_viable_light" />
+	<var name="_serialize_nest_milestones_spawned" scope="phase0_run" used_by="realm_save" />
+	<var name="NEST_SITE_REGION_SCAN_CAP" scope="phase0_run" used_by="_choose_brood_nest_site" default="4" />
+	<var name="NEST_SITE_FRONTIER_VISIT_CAP" scope="phase0_run" used_by="_choose_brood_nest_site_from_frontier" default="480" />
+	<var name="_brood_site_geometry_ok" scope="phase0_run" used_by="_choose_far_brood_nest_site,_choose_brood_nest_site,_brood_site_is_valid" />
+	<var name="_mining_beam_regions" scope="phase0_run" used_by="_refresh_mining_beam_regions,_mining_redraw_priority_regions,_update_mining" />
+	<var name="_terrain_draw_stream_regions" scope="phase0_run" used_by="_sync_terrain_chunk_layers,_draw_world,_terrain_chunk_draw_bounds,_draw_region_prop_lights" />
+	<var name="MINING_TERRAIN_REDRAW_BUDGET" scope="phase0_run" used_by="_flush_mining_terrain_chunks" default="1" />
+	<var name="LIGHTING_PROP_THROTTLE_FRAMES" scope="phase0_run" used_by="_should_draw_heavy_lighting,_process" default="2" />
+	<var name="LIGHTING_CULL_MARGIN" scope="phase0_run" used_by="_lighting_cull_rect,_draw_atmosphere" default="80" />
+	<var name="_should_draw_heavy_lighting" scope="phase0_run" used_by="_draw_atmosphere" />
+	<var name="discovered_biomes" scope="phase0_run" used_by="world_grid,expedition_hud" />
+	<var name="discovery_hive_cells" scope="phase0_run" used_by="_material_for_cell,_mark_discovery_revealed,_rebuild_discovery_hive_cells" />
+	<var name="region_floor_materials" scope="phase0_run" used_by="_floor_material_for_region,_material_for_cell" />
+	<var name="runtime_assets_valid" scope="phase0_run" used_by="_validate_runtime_assets,_draw_hud" default="true" />
+	<var name="runtime_asset_failures" scope="phase0_run" used_by="_validate_runtime_assets,_runtime_asset_failures" />
+	<var name="minimap_cache_image" scope="phase0_run" used_by="_patch_minimap_cell,_flush_minimap_patches,_rebuild_minimap_cache" />
+	<var name="minimap_view_origin" scope="phase0_run" used_by="_minimap_view_origin_for,_minimap_local_pixel,_rebuild_minimap_cache,_update_exploration" />
+	<var name="ui_textures" scope="phase0_run" used_by="_load_ui_textures,_ui_texture,expedition_hud" />
+	<var name="USE_IMPORTED_HUD_SKINS" scope="phase0_run" used_by="_draw_hud_panel,_draw_hud_meter_bar,_draw_combat_crosshair,_draw_hud_state_glyph,_draw_minimap" />
+	<var name="USE_IMPORTED_RETICLES" scope="phase0_run" used_by="_draw_combat_crosshair,CombatVfx.reticle_texture_id" default="true" />
+	<var name="USE_IMPORTED_COMBAT_FX" scope="phase0_run" used_by="_load_combat_textures,_draw_bullets,_draw_player,_draw_combat_impacts,_combat_feedback" default="true" />
+	<var name="muzzle_flash_max" scope="phase0_run" used_by="_fire_pistol,_fire_shotgun,_fire_smg,_fire_railgun,_fire_flamethrower,_draw_player" default="0.14" />
+	<var name="MAX_WAVE_RELOCATIONS_PER_TICK" scope="phase0_run" used_by="_reposition_unreachable_wave_spiders" default="3" />
+	<var name="WAVE_RELOCATE_PLAYER_SAFE_RADIUS" scope="phase0_run" used_by="_reposition_unreachable_wave_spiders,_recall_wave_stragglers" default="200.0" />
+	<var name="WAVE_REROUTE_INTERVAL" scope="phase0_run" used_by="_update_encounter_delivery" default="22.0" />
+	<var name="WAVE_RELOCATE_MIN_STALL" scope="phase0_run" used_by="_reposition_unreachable_wave_spiders" default="1.0" />
+	<var name="player_flow_stale" scope="phase0_run" used_by="_on_terrain_cell_opened,_update_enemies,_refresh_player_flow,_rebuild_base_flows" default="false" />
+	<var name="player_flow_refresh_cooldown" scope="phase0_run" used_by="_update_enemies,_process" default="0.0" />
+	<var name="REGION_PRELOAD_BUDGET" scope="phase0_run" used_by="_update_region_streaming" default="2" />
+	<var name="REGION_PRELOAD_MOVING_BUDGET" scope="phase0_run" used_by="_update_region_streaming" default="2" />
+	<var name="REGION_PRELOAD_MINING_BUDGET" scope="phase0_run" used_by="_update_region_streaming" default="4" />
+	<var name="VISUAL_REGION_BUILD_BUDGET" scope="phase0_run" used_by="_update_region_streaming,_service_visual_region_builds" default="1" />
+	<var name="VISUAL_REGION_BUILD_MOVING_BUDGET" scope="phase0_run" used_by="_update_region_streaming,_service_visual_region_builds" default="1" />
+	<var name="VISUAL_REGION_BUILD_MINING_BUDGET" scope="phase0_run" used_by="_update_region_streaming,_service_visual_region_builds" default="2" />
+	<var name="_pending_visual_region_builds" scope="phase0_run" used_by="_enqueue_visual_region_build,_service_visual_region_builds,_prune_visual_prop_cache" />
+	<var name="_chunk_macro_floor_ok" scope="phase0_run" used_by="_draw_terrain_chunk,_draw_grid_cells,_chunk_floor_macro_drawable" />
+	<var name="_chunk_macro_rock_ok" scope="phase0_run" used_by="_draw_terrain_chunk,_draw_grid_cells,_chunk_rock_macro_drawable" />
+	<var name="_last_render_player_region" scope="phase0_run" used_by="_update_visible_render_window,_should_refresh_render_window" />
+	<var name="_last_render_camera_region" scope="phase0_run" used_by="_update_visible_render_window,_should_refresh_render_window" />
+	<var name="_last_render_signature" scope="phase0_run" used_by="_update_visible_render_window,_render_window_signature" />
+	<var name="_update_visible_render_window" scope="phase0_run" used_by="_ensure_boot_render_window,_update_region_streaming" />
+	<var name="_prefetch_travel_regions" scope="phase0_run" used_by="_update_player" />
+	<var name="_enemy_spatial_buckets" scope="phase0_run" used_by="_update_structures,_update_bullets,_turret_target_spider" />
+	<var name="base_flow_rebuild_cooldown" scope="phase0_run" used_by="_rebuild_base_flows,_update_terrain_debounce,_process" />
+	<var name="MAX_SPARKS" scope="phase0_run" used_by="_burst,_trim_sparks_for_budget" default="384" />
+	<var name="HUD_CHROME_TINT" scope="phase0_run" used_by="_draw_hud_panel,_draw_minimap,_draw_weapon_bar,_draw_base_network_cards" />
+	<var name="_region_cells" scope="world_grid" used_by="get_cell,set_cell,_ensure_region_chunk,materialize_all_regions_for_tests,packed_cells" />
+	<var name="_region_generated" scope="world_grid" used_by="_seal_generated_cells,_sync_generated_cells_in_region,set_cell,_set_cell_as_generated" />
+	<var name="_topology_materialized_regions" scope="world_grid" used_by="_materialize_topology_for_region,materialize_route_regions,_build_scaled_realm_layout_lazy" />
+	<var name="_deferred_layout_specs" scope="world_grid" used_by="_build_scaled_realm_layout_lazy,_generate_region_topology,_configure_seeded_frontier_sites,_purge_deferred_specs_in_bounds" />
+	<var name="_deferred_topology_branches" scope="world_grid" used_by="_purge_deferred_specs_in_bounds,_region_has_pending_topology" />
+	<var name="_route_epoch" scope="world_grid" used_by="generate_realm,establish_first_breach,_region_needs_route_refresh,_generate_region_topology" />
+	<var name="_region_route_epoch" scope="world_grid" used_by="generate_realm,establish_first_breach,_region_needs_route_refresh,_generate_region_topology" />
+	<var name="breached" scope="phase0_run" used_by="_register_first_contact,_try_release_encounter,_update_encounter_delivery,_materialize_spawn_routes,_hud_objective_state,_serialize_run,_restore_run" />
+	<var name="first_breach_cell" scope="phase0_run" used_by="_register_first_contact,prepare_resume_context,_serialize_run,_restore_run" />
+	<var name="first_mine_earned" scope="phase0_run" used_by="_update_mining,_hud_objective_state,_serialize_run,_restore_run" />
+	<var name="_register_first_contact" scope="phase0_run" used_by="_update_mining,_kill_spider" />
+	<var name="_route_strip_regions" scope="world_grid" used_by="has_walkable_route_in_corridor" />
+	<var name="_discovery_plan" scope="world_grid" used_by="configure_discoveries,_configure_discoveries_lazy,_materialize_region_discoveries" />
+	<var name="_discovery_materialized" scope="world_grid" used_by="_materialize_region_discoveries,restore_discoveries_for_visited_regions" />
+	<var name="_mineral_remaining" scope="world_grid" used_by="_configure_discoveries_lazy,_materialize_region_minerals" />
+	<var name="_discovery_rng_seed" scope="world_grid" used_by="configure_discoveries,_materialize_region_discoveries,_materialize_region_minerals" />
+	<var name="crystal_material" scope="phase0_run" used_by="expedition_hud,world_grid" />
+	<var name="foundry_material" scope="phase0_run" used_by="expedition_hud,world_grid" />
+	<var name="sulfur_material" scope="phase0_run" used_by="expedition_hud,world_grid" />
+	<var name="pause_realm_title" scope="phase0_run" used_by="expedition_hud,pause_panel" />
+	<var name="mining_cycle_multiplier" scope="phase0_run" used_by="progression_tree,excavation,_mining_cycle_duration" />
+	<var name="hud_suit_display" scope="phase0_run" used_by="expedition_hud,_update_hud_motion,_draw_hud" />
+	<var name="hud_energy_display" scope="phase0_run" used_by="expedition_hud,_update_hud_motion,_draw_hud" />
+	<var name="hud_scrap_display" scope="phase0_run" used_by="expedition_hud,_update_hud_motion,_draw_hud" />
+	<var name="hud_level_up_flash" scope="phase0_run" used_by="expedition_hud,_reconcile_expedition_xp,_draw_hud" />
+	<var name="hud_sp_pulse" scope="phase0_run" used_by="expedition_hud,_reconcile_expedition_xp,_draw_hud" />
+	<var name="hud_xp_pip_ratio" scope="phase0_run" used_by="expedition_hud,_update_hud_comms,_draw_hud" />
+	<var name="hud_comms_active" scope="phase0_run" used_by="expedition_hud,_push_comms_alert,_hud_objective_state" />
+	<var name="hud_comms_queue" scope="phase0_run" used_by="expedition_hud,_push_comms_alert" />
+	<var name="hud_minimap_sweep" scope="phase0_run" used_by="expedition_hud,_draw_minimap" />
+	<var name="hud_breather_ratio" scope="phase0_run" used_by="expedition_hud,_update_hud_comms,_draw_hud" />
+	<var name="hud_kill_streak" scope="phase0_run" used_by="expedition_hud,_register_hud_kill_streak,_draw_hud" />
+	<var name="combat_textures" scope="phase0_run" used_by="_load_combat_textures,_draw_bullets,_draw_player,_combat_texture,_draw_combat_impacts" />
+	<var name="_enemy_bullet_count" scope="phase0_run" used_by="_spawn_bullet,_remove_bullet_at,_clear_bullets,_try_fire_spitter_projectile" default="0" />
+	<var name="MAX_ENEMY_BULLETS" scope="phase0_run" used_by="_try_fire_spitter_projectile" default="24" />
+	<var name="CAP_RETRY_COOLDOWN" scope="phase0_run" used_by="_try_fire_spitter_projectile" default="0.25" />
+	<var name="Bullet.damage_type" scope="Bullet" used_by="_try_fire_spitter_projectile,_projectile_texture_id_for_bullet" />
+	<var name="Bullet.projectile_level" scope="Bullet" used_by="_try_fire_spitter_projectile" />
+	<var name="Bullet.is_special_lob" scope="Bullet" used_by="_try_fire_bulwark_lob,_try_fire_guardian_cyst,_assign_enemy_projectile_visuals,_draw_bullets" />
+	<var name="Bullet.is_cyst" scope="Bullet" used_by="_try_fire_guardian_cyst,_apply_enemy_projectile_player_status,_assign_enemy_projectile_visuals,_draw_bullets" />
+	<var name="Bullet.age" scope="Bullet" used_by="_update_bullets,_assign_enemy_projectile_visuals,_draw_bullets" default="0" />
+	<var name="Bullet.visual_spin_rate" scope="Bullet" used_by="_assign_enemy_projectile_visuals,_draw_bullets" default="0" />
+	<var name="Bullet.visual_wobble" scope="Bullet" used_by="_assign_enemy_projectile_visuals,_draw_bullets" default="0" />
+	<var name="Bullet.trail_stretch" scope="Bullet" used_by="_assign_enemy_projectile_visuals,_draw_bullets" default="1" />
+	<var name="CombatImpact.enemy_pop" scope="CombatImpact" used_by="_spawn_combat_impact,_draw_combat_impacts,_enemy_muzzle_puff" default="false" />
+	<var name="combat_fx_phase" scope="phase0_run" used_by="_process,_draw_bullets,_draw_enemy_hazard_patch,_draw_player_status_overlay" default="0" />
+	<var name="player_dot_time" scope="phase0_run" used_by="_update_player_status,_apply_player_dot,_clear_player_status,_draw_player_status_overlay" />
+	<var name="player_dot_dps" scope="phase0_run" used_by="_update_player_status,_apply_player_dot" />
+	<var name="player_slow_time" scope="phase0_run" used_by="_update_player_status,_apply_player_slow,_update_player,_draw_player_status_overlay" />
+	<var name="player_slow_mult" scope="phase0_run" used_by="_update_player,_apply_player_slow" />
+	<var name="_encounter_special_lob_used" scope="phase0_run" used_by="_start_encounter,_try_fire_bulwark_lob,_try_fire_guardian_cyst" default="0" />
+	<var name="FirePatch.player_only" scope="FirePatch" used_by="_update_fire_patches,_enqueue_enemy_hazard_patch,_fire_flamethrower,_draw_bullets,_clear_enemy_hazard_patches" />
+	<var name="FirePatch.source_damage_type" scope="FirePatch" used_by="_spawn_enemy_hazard_from_bullet,_draw_enemy_hazard_patch" />
+	<var name="mob_textures" scope="phase0_run" used_by="_load_mob_textures,_mob_texture_for_spider,_draw_enemies" />
+	<var name="biome_mob_textures" scope="phase0_run" used_by="_load_mob_textures,_mob_texture_for_spider,_draw_enemies" />
+	<var name="Spider.biome_id" scope="Spider" used_by="_assign_spider_biome,_mob_texture_for_spider,realm_save" default="-1" />
+	<var name="combat_impacts" scope="phase0_run" used_by="_spawn_combat_impact,_combat_feedback,_update_combat_impacts,_draw_combat_impacts" />
+	<var name="SIDEBAR_RECT" scope="menu_screen" used_by="_build_sidebar_frame,_build_sidebar_fallback" />
+	<var name="CONTENT_X" scope="menu_screen" used_by="_build_main_menu,footer" />
+	<var name="CONTENT_W" scope="menu_screen" used_by="_build_main_menu,_make_button,footer" />
+	<var name="LOGO_TOP" scope="menu_screen" used_by="_build_main_menu" />
+	<var name="LOGO_H" scope="menu_screen" used_by="_build_main_menu" />
+	<var name="BETA_TAGLINE" scope="menu_screen" used_by="_build_main_menu" />
+	<var name="elapsed" scope="splash_screen" used_by="_process,_draw,_intro_ratio" />
+	<var name="fade_out_started" scope="splash_screen" used_by="_process,_begin_fade_out,_outro_ratio" />
+	<var name="studio_texture" scope="splash_screen" used_by="_draw_logo,_logo_rect" />
+	<var name="_visual_dirty_mask" scope="phase0_run" used_by="_mark_visual_dirty,_queue_visual_redraw" default="31" />
+	<var name="_paused_ui_dirty" scope="phase0_run" used_by="set_paused,_queue_visual_redraw" default="false" />
+	<var name="_wave_pressure_nearby" scope="phase0_run" used_by="_ensure_wave_pressure_count,_wave_spawn_headroom,_brood_pulse_allowed" default="0" />
+	<var name="_wave_pressure_frame" scope="phase0_run" used_by="_ensure_wave_pressure_count" default="-1" />
+	<var name="_wave_pressure_enemy_count" scope="phase0_run" used_by="_ensure_wave_pressure_count" default="-1" />
+	<var name="_spawn_lane_corridors" scope="world_grid" used_by="register_spawn_cell,spawn_lane_corridor_regions,has_walkable_route" />
+	<var name="_walkable_route_cache" scope="world_grid" used_by="has_walkable_route_in_corridor,invalidate_walkable_route_cache_for_cell" />
+	<var name="_structure_spatial_buckets" scope="phase0_run" used_by="_ensure_structure_spatial_buckets,_barricade_slow,_turret_target_spider" />
+	<var name="_cached_bases_under_attack" scope="phase0_run" used_by="_refresh_bases_under_attack_cache,_base_is_under_attack,_bases_under_attack_count" />
+	<var name="pending_brood_carrier_requests" scope="phase0_run" used_by="_assign_brood_carrier,_process_pending_brood_carriers" />
+</variables>

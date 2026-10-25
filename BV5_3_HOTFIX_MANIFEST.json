@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "project": "Crawl Brawl",
+  "patch": "BV5.3 Chunked World / Simulation Stabilization",
+  "baseline": {
+    "snapshot": "BV5-DEV004",
+    "file": "CrawlBrawl_BV5_DEV004_SOURCE_20260822_1138.zip",
+    "sha256": "11915389aa884307a044c6c03a7988efd4b60f052b0bcb0daa140b916c9a3827"
+  },
+  "save_version": 14,
+  "runtime_validation": "pending Godot 4.7.1 launcher validation",
+  "files": [
+    "scripts/phase0_run.gd",
+    "systems/world_grid.gd",
+    "systems/gameplay_telemetry.gd",
+    "systems/run_components/run_world_presentation.gd",
+    "tests/chunk_simulation_bv53_test.gd",
+    "tests/world_load_bulk_test.gd",
+    "tests/realm_scale_test.gd",
+    "tests/open_world_boundary_test.gd",
+    "tests/run_regression_batch.gd",
+    "EnVars/SysMap.xml",
+    "EnVars/VarMap.xml",
+    "CHANGELOG.md",
+    "README_STREAMING_BV5_3.md",
+    "VALIDATION_BV5_3.txt",
+    "BV5_3_HOTFIX_MANIFEST.json"
+  ],
+  "goals": [
+    "bound open-world generated cell residency",
+    "separate prepared, simulation, and render windows",
+    "prevent background streaming from competing with mining",
+    "make terrain mutation redraw local and persistent",
+    "bound hostile simulation and background ecology",
+    "make flow corridor cost scale by region rather than tile distance",
+    "carry compact last-session performance evidence in the next source handoff"
+  ]
+}

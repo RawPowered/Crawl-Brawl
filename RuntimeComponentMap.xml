@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<runtime_components schema="1" source="scripts/phase0_run.gd" phase="1">
+  <invariants>
+    <invariant id="run_facade">CrawlBrawlRun remains the scene-facing composition root and compatibility facade.</invariant>
+    <invariant id="save_schema">SAVE_VERSION and RealmSave schema remain unchanged in Phase 1.</invariant>
+    <invariant id="state_authority">Authoritative mutable run state remains on CrawlBrawlRun until explicit state migration.</invariant>
+    <invariant id="external_systems">Existing systems/* scripts keep their current paths and APIs.</invariant>
+    <invariant id="structural_only">Phase 1 intentionally changes ownership structure, not gameplay behavior.</invariant>
+  </invariants>
+
+  <component id="run_host" status="active" path="scripts/phase0_run.gd" role="composition_root">
+    <owns>Godot lifecycle callbacks, scene integration, authoritative Phase-1 state, compatibility method facade</owns>
+  </component>
+
+  <component id="world_presentation" status="extracted" phase="1" path="systems/run_components/run_world_presentation.gd" functions="105">
+    <owns>terrain/world drawing, material tiling, visual props/formations/landmarks, minimap raster/cache helpers</owns>
+    <depends_on>run_host,world_grid,realm_visual_style,base_network,placeable_blocks</depends_on>
+  </component>
+
+  <component id="actor_presentation" status="extracted" phase="1" path="systems/run_components/run_actor_presentation.gd" functions="46">
+    <owns>structures,enemies,brood nests,projectile visuals,player/held-weapon visuals,mining/target/build previews</owns>
+    <depends_on>run_host,combat_vfx,biome_bestiary,base_network,foundry,personal_base,operator_loadout</depends_on>
+  </component>
+
+  <component id="hud_presentation" status="extracted" phase="1" path="systems/run_components/run_hud_presentation.gd" functions="21">
+    <owns>HUD state presentation,comms transitions,objectives,lighting,atmosphere,contact shadows,motes</owns>
+    <depends_on>run_host,expedition_hud,realm_visual_style,display_settings,base_network</depends_on>
+  </component>
+
+  <component id="world_runtime" status="planned" phase="2">
+    <owns>stream/preload scheduling,render-window decisions,exploration/discovery,terrain dirty scheduling</owns>
+    <depends_on>world_grid,world_load,flow_field,run_host</depends_on>
+  </component>
+  <component id="operator_runtime" status="planned" phase="3">
+    <owns>input,movement,mining,loadout,backpack,pickups,onboarding</owns>
+    <depends_on>operator_loadout,operator_onboard,placeable_blocks,world_runtime</depends_on>
+  </component>
+  <component id="encounter_runtime" status="planned" phase="4">
+    <owns>scouts,hive awareness,wave delivery,spawn admission,brood nests,enemy routing and locomotion</owns>
+    <depends_on>hive_awareness,wave_spawn,mob_locomotion,flow_field,world_runtime</depends_on>
+  </component>
+  <component id="combat_runtime" status="planned" phase="5">
+    <owns>weapon fire,bullets,enemy projectiles,damage,status,hazards,combat spatial queries,VFX events</owns>
+    <depends_on>combat_spatial,combat_vfx,biome_bestiary,encounter_runtime,operator_runtime</depends_on>
+  </component>
+  <component id="structure_runtime" status="planned" phase="6">
+    <owns>placement,barriers,turrets,torches,doors,chests,foundry world interaction,structure damage</owns>
+    <depends_on>base_network,foundry,personal_base,combat_runtime,world_runtime</depends_on>
+  </component>
+  <component id="economy_progression" status="planned" phase="7">
+    <owns>scrap/material economy,shop/crafting,foundry production,upgrades,skill tree,armor/base progression</owns>
+    <depends_on>scrap_economy,upgrade_economy,progression_tree,player_armor,foundry,structure_runtime</depends_on>
+  </component>
+  <component id="persistence_runtime" status="planned" phase="8">
+    <owns>checkpoint slots,realm serialization,load/migration,recovery cache</owns>
+    <depends_on>realm_save,all_runtime_state_contracts</depends_on>
+  </component>
+  <component id="overlay_ui" status="planned" phase="9">
+    <owns>pause/archive/core/foundry/chest/backpack Control trees and interaction presentation</owns>
+    <depends_on>economy_progression,structure_runtime,persistence_runtime,operator_runtime</depends_on>
+  </component>
+
+  <feature_routing>
+    <feature id="personal_base" owner="structure_runtime" integrations="economy_progression,persistence_runtime" />
+    <feature id="foundry" owner="structure_runtime" integrations="economy_progression,persistence_runtime" />
+    <feature id="base_network" owner="structure_runtime" integrations="encounter_runtime,persistence_runtime,hud_presentation" />
+    <feature id="world_load" owner="world_runtime" />
+    <feature id="world_grid" owner="world_runtime" integrations="world_presentation,encounter_runtime" />
+    <feature id="expedition_hud" owner="hud_presentation" integrations="operator_runtime,encounter_runtime,economy_progression" />
+    <feature id="terrain_tiling" owner="world_presentation" integrations="world_runtime" />
+    <feature id="biome_bestiary" owner="encounter_runtime" integrations="combat_runtime,actor_presentation" />
+    <feature id="player_sprite_import" owner="actor_presentation" />
+    <feature id="held_weapon_art" owner="actor_presentation" integrations="combat_runtime,operator_runtime" />
+    <feature id="hive_awareness" owner="encounter_runtime" />
+    <feature id="wave_spawn" owner="encounter_runtime" />
+    <feature id="mob_locomotion" owner="encounter_runtime" />
+    <feature id="scrap_economy" owner="economy_progression" integrations="combat_runtime" />
+    <feature id="realm_save" owner="persistence_runtime" />
+    <feature id="player_armor" owner="economy_progression" integrations="combat_runtime,operator_runtime" />
+    <feature id="upgrade_economy" owner="economy_progression" />
+    <feature id="progression_tree" owner="economy_progression" />
+    <feature id="flow_field" owner="encounter_runtime" integrations="world_runtime,structure_runtime" />
+    <feature id="combat_spatial" owner="combat_runtime" integrations="structure_runtime,encounter_runtime" />
+    <feature id="combat_vfx" owner="combat_runtime" integrations="actor_presentation" />
+    <feature id="menu_ui" owner="external_main_menu" />
+    <feature id="splash_screen" owner="external_main_menu" />
+    <feature id="operator_loadout" owner="operator_runtime" integrations="structure_runtime,economy_progression,actor_presentation" />
+    <feature id="operator_onboard" owner="operator_runtime" />
+    <feature id="gameplay_telemetry" owner="run_host" integrations="encounter_runtime,world_runtime" />
+  </feature_routing>
+</runtime_components>

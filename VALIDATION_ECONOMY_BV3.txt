@@ -1,0 +1,87 @@
+Checks: 81  Passed: 81  Failed: 0
+PASS: Change surface limited to expected files -- changed=['EconomyMap.xml', 'README_ECONOMY_BV3.md', 'VALIDATION_ECONOMY_BV3.txt', 'scripts/phase0_run.gd', 'systems/biome_wall_economy.gd', 'systems/material_economy.gd', 'systems/operator_loadout.gd', 'systems/upgrade_economy.gd']; unexpected=[]; missing_expected=[]
+PASS: scripts/phase0_run.gd: delimiter balance
+PASS: scripts/phase0_run.gd: no duplicate top-level func names -- duplicates=[]
+PASS: systems/material_economy.gd: delimiter balance
+PASS: systems/material_economy.gd: no duplicate top-level func names -- duplicates=[]
+PASS: systems/upgrade_economy.gd: delimiter balance
+PASS: systems/upgrade_economy.gd: no duplicate top-level func names -- duplicates=[]
+PASS: systems/operator_loadout.gd: delimiter balance
+PASS: systems/operator_loadout.gd: no duplicate top-level func names -- duplicates=[]
+PASS: systems/biome_wall_economy.gd: delimiter balance
+PASS: systems/biome_wall_economy.gd: no duplicate top-level func names -- duplicates=[]
+PASS: SAVE_VERSION unchanged -- baseline=14 modified=14
+PASS: Heavy doorway registered in construction_unlocks
+PASS: Construction restore iterates registry
+PASS: Wall economy profile: BIOME_TUNNEL
+PASS: Wall economy profile: BIOME_HIVE
+PASS: Wall economy profile: BIOME_BUNKER
+PASS: Wall economy profile: BIOME_CRYSTAL
+PASS: Wall economy profile: BIOME_FOUNDRY
+PASS: Wall economy profile: BIOME_SULFUR
+PASS: Wall economy profile: BIOME_IRON
+PASS: Seven biome wall profiles present
+PASS: Wall economy material constants resolve -- missing=[]
+PASS: Preload exists: systems/material_economy.gd
+PASS: Preload exists: systems/world_grid.gd
+PASS: Preload exists: systems/world_grid.gd
+PASS: Preload exists: systems/world_address.gd
+PASS: Preload exists: systems/ruined_fortress.gd
+PASS: Preload exists: systems/flow_field.gd
+PASS: Preload exists: scripts/render_layer.gd
+PASS: Preload exists: systems/difficulty_profile.gd
+PASS: Preload exists: systems/wave_director.gd
+PASS: Preload exists: systems/hive_awareness.gd
+PASS: Preload exists: systems/base_network.gd
+PASS: Preload exists: systems/material_economy.gd
+PASS: Preload exists: systems/biome_wall_economy.gd
+PASS: Preload exists: systems/foundry_unit.gd
+PASS: Preload exists: systems/shelter_unit.gd
+PASS: Preload exists: systems/realm_save.gd
+PASS: Preload exists: systems/realm_visual_style.gd
+PASS: Preload exists: systems/display_settings.gd
+PASS: Preload exists: systems/texture_loader.gd
+PASS: Preload exists: systems/progression_tree.gd
+PASS: Preload exists: systems/upgrade_economy.gd
+PASS: Preload exists: systems/player_armor.gd
+PASS: Preload exists: systems/scrap_economy.gd
+PASS: Preload exists: systems/mob_locomotion.gd
+PASS: Preload exists: systems/combat_spatial.gd
+PASS: Preload exists: systems/combat_vfx.gd
+PASS: Preload exists: systems/biome_bestiary.gd
+PASS: Preload exists: systems/enemy_projectile_effects.gd
+PASS: Preload exists: systems/operator_loadout.gd
+PASS: Preload exists: systems/operator_onboard.gd
+PASS: Preload exists: systems/placeable_blocks.gd
+PASS: Preload exists: systems/gameplay_telemetry.gd
+PASS: Preload exists: systems/run_components/run_world_presentation.gd
+PASS: Preload exists: systems/run_components/run_actor_presentation.gd
+PASS: Preload exists: systems/run_components/run_hud_presentation.gd
+PASS: Mining captures placed-wall state before clear
+PASS: Placed walls do not receive MINE_CELL scrap
+PASS: Placed walls do not collect minerals
+PASS: Wall economy invoked for every mined wall
+PASS: Pure stack capacity helper exists
+PASS: Deployable craft preview is non-mutating
+PASS: Wall block counting helper exists
+PASS: Materials action dispatch includes recycle
+PASS: Materials action dispatch includes wall sale
+PASS: Core action arrays support ten slots
+PASS: Ten core service buttons wired
+PASS: Pending foundry kit only clears after successful grant
+PASS: Restore retains pending foundry kit if inventory is full
+PASS: Personal base uses slot capacity, not legacy 12-unit material gate
+PASS: Door upgrade costs centralized
+PASS: Runtime uses centralized door upgrade economics
+PASS: EconomyMap.xml parses -- root=economy
+PASS: Host function count only grows by expected helper set -- baseline=868 modified=879 delta=11
+PASS: scripts/phase0_run.gd: line-ending style preserved -- LF->LF
+PASS: systems/material_economy.gd: line-ending style preserved -- LF->LF
+PASS: systems/upgrade_economy.gd: line-ending style preserved -- CRLF->CRLF
+PASS: systems/operator_loadout.gd: line-ending style preserved -- CRLF->CRLF
+PASS: README marks Godot runtime validation pending
+
+RUNTIME GATE
+Godot 4.7.1 is not available in this execution environment, so engine import,
+scene load, and live gameplay validation remain pending on the Windows project
+machine. Use the Crawl Brawl launcher Validate Build action before playtesting.

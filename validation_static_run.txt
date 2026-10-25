@@ -1,0 +1,16 @@
+original_functions 862
+host_functions 862
+signature_key_match True
+signature_exact_match True
+save_version_original 14
+save_version_refactor 14
+run_actor_presentation.gd impl_functions 46 overlap 0 lex_errors 0 bare_external_calls 0 monolith_local_types 0 balance {'(': 0, '[': 0, '{': 0} min_balance 0
+run_hud_presentation.gd impl_functions 21 overlap 0 lex_errors 0 bare_external_calls 0 monolith_local_types 0 balance {'(': 0, '[': 0, '{': 0} min_balance 0
+run_world_presentation.gd impl_functions 105 overlap 0 lex_errors 0 bare_external_calls 0 monolith_local_types 0 balance {'(': 0, '[': 0, '{': 0} min_balance 0
+extracted_implementation_functions 172
+unique_extracted_functions 172
+host_delegate_calls 175
+host_lex_errors 0
+host_balance ({'(': 0, '[': 0, '{': 0}, 0)
+godot_runtime_validation PENDING (Godot executable and full project not present in this environment)
+godot_4_7_1_reported_inference_sites_fixed 106

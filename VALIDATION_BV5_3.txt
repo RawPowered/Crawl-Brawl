@@ -1,0 +1,45 @@
+Crawl Brawl BV5.3 — Chunked World / Simulation Stabilization
+Validation basis: CrawlBrawl_BV5_DEV004_SOURCE_20260822_1138.zip
+Baseline SHA256: 11915389aa884307a044c6c03a7988efd4b60f052b0bcb0daa140b916c9a3827
+
+STATIC GATES
+- 50 / 50 static validation gates passed.
+- Existing phase0_run.gd function names/signatures preserved; new helpers only.
+- Existing world_grid.gd function names/signatures preserved; new helpers only.
+- GameplayTelemetry.tick(delta, enemy_count=0) preserved as compatibility facade; extended runtime metrics use tick_runtime(...).
+- No duplicate GDScript function declarations in modified runtime files.
+- String/comment-aware delimiter balance passed for all modified GDScript/test files.
+- EnVars/SysMap.xml parses.
+- EnVars/VarMap.xml parses.
+- SAVE_VERSION remains 14.
+- No new ':=' declarations sourced directly from Dictionary.get in modified runtime files.
+
+BV5.3 CONTRACT GATES
+- Prepare horizon is bounded at REGION_SIZE * 9 (216 cells across).
+- Prepare horizon recenters instead of growing permanently.
+- Prepared, simulation-active, and render-active regions are separate states.
+- Simulation halo is 1 region around render, capped at 81 regions.
+- Visible/travel-critical preload requests promote ahead of background horizon generation.
+- Mining aim no longer requests region prefetch.
+- Background region generation receives zero budget while mining.
+- Visual prop/formation cache generation receives zero budget while mining.
+- Topology generation and visual-cache generation do not execute in the same frame.
+- Terrain mutation uses persistent 8x8 sector CanvasItems.
+- Full 24x24 mutation-triggered terrain raster is deferred to quiet refinement.
+- Terrain signal is emitted before route-cache maintenance.
+- Placement/open hooks do not duplicate terrain visual invalidation.
+- Off-simulation hostile AI hibernates before LOS/pathing/combat work.
+- Spawn population gates count simulation-active enemies.
+- Incidental non-persistent ecology retires after 12 seconds outside simulation.
+- Flow corridors and L-strip fallback are region-native and support signed infinite coordinates.
+- diagnostics/LAST_SESSION.json is generated on telemetry shutdown.
+- Mining telemetry separates mutation-queue, open-cell, and total commit timing.
+- chunk_simulation_bv53_test.gd is registered in run_regression_batch.gd.
+
+SEMANTIC CHECK
+- Region-native corridor algorithm compared against legacy cell-scan semantics across 2,000 randomized finite authored-world endpoint pairs: 0 mismatches.
+- Signed-coordinate corridor test beyond the legacy realm rectangle retained both endpoint regions and remained bounded by region count.
+
+RUNTIME GATE
+- Godot 4.7.1 is not installed in this execution environment, so actual Godot parse/import/play validation remains pending.
+- Run the native launcher Validate Build gate before playtesting.

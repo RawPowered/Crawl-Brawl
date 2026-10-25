@@ -1,0 +1,744 @@
+[
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 557,
+    "variable": "center",
+    "before": "var center := grid.cell_to_world(surface_portal_cell)",
+    "after": "var center = grid.cell_to_world(surface_portal_cell)"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 875,
+    "variable": "region",
+    "before": "var region := grid.region_for_cell(cell)",
+    "after": "var region = grid.region_for_cell(cell)"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 928,
+    "variable": "biome_id",
+    "before": "var biome_id := placeable_blocks.biome_at(cell, host._biome_for_cell(cell))",
+    "after": "var biome_id = placeable_blocks.biome_at(cell, host._biome_for_cell(cell))"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1183,
+    "variable": "region",
+    "before": "var region := grid.region_for_cell(cell)",
+    "after": "var region = grid.region_for_cell(cell)"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1187,
+    "variable": "current_biome",
+    "before": "var current_biome := grid.region_biome(region)",
+    "after": "var current_biome = grid.region_biome(region)"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1188,
+    "variable": "region_start",
+    "before": "var region_start := region * WorldGridScript.REGION_SIZE",
+    "after": "var region_start = region * WorldGridScript.REGION_SIZE"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1189,
+    "variable": "local",
+    "before": "var local := cell - region_start",
+    "after": "var local = cell - region_start"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1194,
+    "variable": "neighbor_region",
+    "before": "var neighbor_region := region + direction",
+    "after": "var neighbor_region = region + direction"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1195,
+    "variable": "neighbor_biome",
+    "before": "var neighbor_biome := grid.region_biome(neighbor_region)",
+    "after": "var neighbor_biome = grid.region_biome(neighbor_region)"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1327,
+    "variable": "tile_size",
+    "before": "var tile_size := grid.tile_size",
+    "after": "var tile_size = grid.tile_size"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1331,
+    "variable": "floor_down",
+    "before": "var floor_down := grid.is_walkable(cell + Vector2i.DOWN)",
+    "after": "var floor_down = grid.is_walkable(cell + Vector2i.DOWN)"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1332,
+    "variable": "floor_up",
+    "before": "var floor_up := grid.is_walkable(cell + Vector2i.UP)",
+    "after": "var floor_up = grid.is_walkable(cell + Vector2i.UP)"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1333,
+    "variable": "floor_right",
+    "before": "var floor_right := grid.is_walkable(cell + Vector2i.RIGHT)",
+    "after": "var floor_right = grid.is_walkable(cell + Vector2i.RIGHT)"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1334,
+    "variable": "floor_left",
+    "before": "var floor_left := grid.is_walkable(cell + Vector2i.LEFT)",
+    "after": "var floor_left = grid.is_walkable(cell + Vector2i.LEFT)"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1420,
+    "variable": "material_id",
+    "before": "var material_id := grid.region_biome(region)",
+    "after": "var material_id = grid.region_biome(region)"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1475,
+    "variable": "material_id",
+    "before": "var material_id := grid.region_biome(region)",
+    "after": "var material_id = grid.region_biome(region)"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1536,
+    "variable": "material_id",
+    "before": "var material_id := grid.region_biome(region)",
+    "after": "var material_id = grid.region_biome(region)"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1622,
+    "variable": "center",
+    "before": "var center := grid.cell_to_world(cell) + draw_offset",
+    "after": "var center = grid.cell_to_world(cell) + draw_offset"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1709,
+    "variable": "region",
+    "before": "var region := grid.region_for_cell(cell)",
+    "after": "var region = grid.region_for_cell(cell)"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1763,
+    "variable": "delta",
+    "before": "var delta := new_origin - minimap_view_origin",
+    "after": "var delta = new_origin - minimap_view_origin"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1807,
+    "variable": "pixel",
+    "before": "var pixel := cell - minimap_view_origin",
+    "after": "var pixel = cell - minimap_view_origin"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1813,
+    "variable": "local",
+    "before": "var local := cell - minimap_view_origin",
+    "after": "var local = cell - minimap_view_origin"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1903,
+    "variable": "player_cell",
+    "before": "var player_cell := grid.world_to_cell(player_position)",
+    "after": "var player_cell = grid.world_to_cell(player_position)"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1905,
+    "variable": "view_end",
+    "before": "var view_end := minimap_view_origin + Vector2i(cache_width, cache_height)",
+    "after": "var view_end = minimap_view_origin + Vector2i(cache_width, cache_height)"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1933,
+    "variable": "player_cell",
+    "before": "var player_cell := grid.world_to_cell(player_position)",
+    "after": "var player_cell = grid.world_to_cell(player_position)"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1944,
+    "variable": "player_cell",
+    "before": "var player_cell := grid.world_to_cell(player_position)",
+    "after": "var player_cell = grid.world_to_cell(player_position)"
+  },
+  {
+    "file": "systems/run_components/run_world_presentation.gd",
+    "line": 1952,
+    "variable": "cell",
+    "before": "var cell := grid.world_to_cell(spider.position)",
+    "after": "var cell = grid.world_to_cell(spider.position)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 576,
+    "variable": "shadow_position",
+    "before": "var shadow_position := structure.position",
+    "after": "var shadow_position = structure.position"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 612,
+    "variable": "foundry_index",
+    "before": "var foundry_index := structures.find(structure)",
+    "after": "var foundry_index = structures.find(structure)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 614,
+    "variable": "foundry_origin",
+    "before": "var foundry_origin := grid.cell_to_world(structure.cell) - Vector2.ONE * float(grid.tile_size) * 0.5",
+    "after": "var foundry_origin = grid.cell_to_world(structure.cell) - Vector2.ONE * float(grid.tile_size) * 0.5"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 616,
+    "variable": "foundry_center",
+    "before": "var foundry_center := foundry_origin + foundry_size * 0.5",
+    "after": "var foundry_center = foundry_origin + foundry_size * 0.5"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 618,
+    "variable": "foundry_online",
+    "before": "var foundry_online := host._foundry_operational(foundry_index)",
+    "after": "var foundry_online = host._foundry_operational(foundry_index)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 640,
+    "variable": "shelter_origin",
+    "before": "var shelter_origin := grid.cell_to_world(structure.cell) - Vector2.ONE * float(grid.tile_size) * 0.5",
+    "after": "var shelter_origin = grid.cell_to_world(structure.cell) - Vector2.ONE * float(grid.tile_size) * 0.5"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 668,
+    "variable": "torch_color",
+    "before": "var torch_color := host._torch_light_color(structure)",
+    "after": "var torch_color = host._torch_light_color(structure)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 677,
+    "variable": "torch_contacts",
+    "before": "var torch_contacts := host._torch_contact_count(structure)",
+    "after": "var torch_contacts = host._torch_contact_count(structure)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 708,
+    "variable": "door_origin",
+    "before": "var door_origin := grid.cell_to_world(structure.cell) - Vector2(grid.tile_size * 0.5, grid.tile_size * 0.5)",
+    "after": "var door_origin = grid.cell_to_world(structure.cell) - Vector2(grid.tile_size * 0.5, grid.tile_size * 0.5)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 710,
+    "variable": "door_center",
+    "before": "var door_center := door_origin + door_pixel_size * 0.5",
+    "after": "var door_center = door_origin + door_pixel_size * 0.5"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 729,
+    "variable": "pip_x",
+    "before": "var pip_x := door_center.x + float(pip - (structure.level - 1) * 0.5) * 5.0",
+    "after": "var pip_x = door_center.x + float(pip - (structure.level - 1) * 0.5) * 5.0"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 764,
+    "variable": "condition_position",
+    "before": "var condition_position := structure.position",
+    "after": "var condition_position = structure.position"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 804,
+    "variable": "sprite_rotation",
+    "before": "var sprite_rotation := spider.facing_angle",
+    "after": "var sprite_rotation = spider.facing_angle"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 907,
+    "variable": "center",
+    "before": "var center := grid.cell_to_world(nest.cell)",
+    "after": "var center = grid.cell_to_world(nest.cell)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 926,
+    "variable": "bar_position",
+    "before": "var bar_position := center + Vector2(-26, -radius - 13)",
+    "after": "var bar_position = center + Vector2(-26, -radius - 13)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 927,
+    "variable": "nest_label",
+    "before": "var nest_label := \"APEX // \" + nest.apex_id if not nest.apex_id.is_empty() else (\"SPIDER LAIR\" if nest.is_lair else \"BROOD BASE // MK%d\" % (brood_escalation + 1))",
+    "after": "var nest_label = \"APEX // \" + nest.apex_id if not nest.apex_id.is_empty() else (\"SPIDER LAIR\" if nest.is_lair else \"BROOD BASE // MK%d\" % (brood_escalation + 1))"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 955,
+    "variable": "patch_texture",
+    "before": "var patch_texture := host._combat_texture(\"flame_patch\")",
+    "after": "var patch_texture = host._combat_texture(\"flame_patch\")"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 957,
+    "variable": "patch_size",
+    "before": "var patch_size := Vector2.ONE * patch.radius * (1.2 + ratio * 0.35)",
+    "after": "var patch_size = Vector2.ONE * patch.radius * (1.2 + ratio * 0.35)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 964,
+    "variable": "ember_texture",
+    "before": "var ember_texture := host._combat_texture(\"flame_ember\")",
+    "after": "var ember_texture = host._combat_texture(\"flame_ember\")"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 970,
+    "variable": "direction",
+    "before": "var direction := bullet.velocity.normalized() if bullet.velocity.length_squared() > 0.0001 else Vector2.RIGHT",
+    "after": "var direction = bullet.velocity.normalized() if bullet.velocity.length_squared() > 0.0001 else Vector2.RIGHT"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 971,
+    "variable": "draw_position",
+    "before": "var draw_position := bullet.position",
+    "after": "var draw_position = bullet.position"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 974,
+    "variable": "body_modulate",
+    "before": "var body_modulate := Color.WHITE if not bullet.enemy_round else bullet.color",
+    "after": "var body_modulate = Color.WHITE if not bullet.enemy_round else bullet.color"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 977,
+    "variable": "wobble_offset",
+    "before": "var wobble_offset := Vector2(-direction.y, direction.x) * sin(bullet.age * 9.0 + combat_fx_phase) * bullet.visual_wobble",
+    "after": "var wobble_offset = Vector2(-direction.y, direction.x) * sin(bullet.age * 9.0 + combat_fx_phase) * bullet.visual_wobble"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 983,
+    "variable": "projectile_texture",
+    "before": "var projectile_texture := host._projectile_texture_for_bullet(bullet)",
+    "after": "var projectile_texture = host._projectile_texture_for_bullet(bullet)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 984,
+    "variable": "projectile_size",
+    "before": "var projectile_size := host._projectile_size_for_bullet(bullet)",
+    "after": "var projectile_size = host._projectile_size_for_bullet(bullet)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 985,
+    "variable": "trail_texture",
+    "before": "var trail_texture := host._projectile_trail_texture_for_bullet(bullet)",
+    "after": "var trail_texture = host._projectile_trail_texture_for_bullet(bullet)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1024,
+    "variable": "patch_texture",
+    "before": "var patch_texture := host._combat_texture(hazard_id) if not hazard_id.is_empty() else null",
+    "after": "var patch_texture = host._combat_texture(hazard_id) if not hazard_id.is_empty() else null"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1027,
+    "variable": "patch_size",
+    "before": "var patch_size := Vector2.ONE * patch.radius * (1.15 + ratio * 0.25)",
+    "after": "var patch_size = Vector2.ONE * patch.radius * (1.15 + ratio * 0.25)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1037,
+    "variable": "accent",
+    "before": "var accent := host._combat_texture(accent_id) if not accent_id.is_empty() else null",
+    "after": "var accent = host._combat_texture(accent_id) if not accent_id.is_empty() else null"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1057,
+    "variable": "laser_muzzle_texture",
+    "before": "var laser_muzzle_texture := host._combat_texture(\"laser_muzzle\")",
+    "after": "var laser_muzzle_texture = host._combat_texture(\"laser_muzzle\")"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1063,
+    "variable": "laser_impact_texture",
+    "before": "var laser_impact_texture := host._combat_texture(\"laser_impact\")",
+    "after": "var laser_impact_texture = host._combat_texture(\"laser_impact\")"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1078,
+    "variable": "stream_texture",
+    "before": "var stream_texture := host._combat_texture(stream_key)",
+    "after": "var stream_texture = host._combat_texture(stream_key)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1091,
+    "variable": "muzzle_texture",
+    "before": "var muzzle_texture := host._combat_texture(muzzle_texture_id)",
+    "after": "var muzzle_texture = host._combat_texture(muzzle_texture_id)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1104,
+    "variable": "recoil_texture",
+    "before": "var recoil_texture := host._combat_texture(recoil_texture_id)",
+    "after": "var recoil_texture = host._combat_texture(recoil_texture_id)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1115,
+    "variable": "reload_duration",
+    "before": "var reload_duration := host._weapon_reload_duration(current_weapon)",
+    "after": "var reload_duration = host._weapon_reload_duration(current_weapon)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1152,
+    "variable": "rim",
+    "before": "var rim := host._combat_texture(\"status_venom_rim\")",
+    "after": "var rim = host._combat_texture(\"status_venom_rim\")"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1163,
+    "variable": "pulse",
+    "before": "var pulse := host._combat_texture(\"status_dot_pulse\")",
+    "after": "var pulse = host._combat_texture(\"status_dot_pulse\")"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1220,
+    "variable": "mining_mount",
+    "before": "var mining_mount := visual_position + _player_hand_offset(direction_name) * 0.35 + aim_direction * 9.0",
+    "after": "var mining_mount = visual_position + _player_hand_offset(direction_name) * 0.35 + aim_direction * 9.0"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1228,
+    "variable": "mount_position",
+    "before": "var mount_position := visual_position + _player_hand_offset(direction_name) + aim_direction * 2.0",
+    "after": "var mount_position = visual_position + _player_hand_offset(direction_name) + aim_direction * 2.0"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1310,
+    "variable": "desired_offset",
+    "before": "var desired_offset := desired_muzzle - player_position",
+    "after": "var desired_offset = desired_muzzle - player_position"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1314,
+    "variable": "safe_forward",
+    "before": "var safe_forward := host._ray_terrain_distance(player_position, aim_direction, desired_forward)",
+    "after": "var safe_forward = host._ray_terrain_distance(player_position, aim_direction, desired_forward)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1317,
+    "variable": "lateral_offset",
+    "before": "var lateral_offset := desired_offset - aim_direction * desired_forward",
+    "after": "var lateral_offset = desired_offset - aim_direction * desired_forward"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1318,
+    "variable": "clamp_ratio",
+    "before": "var clamp_ratio := safe_forward / desired_forward",
+    "after": "var clamp_ratio = safe_forward / desired_forward"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1348,
+    "variable": "color",
+    "before": "var color := spark.color",
+    "after": "var color = spark.color"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1364,
+    "variable": "draw_position",
+    "before": "var draw_position := pickup.position + Vector2(0, bob)",
+    "after": "var draw_position = pickup.position + Vector2(0, bob)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1426,
+    "variable": "crack_angle",
+    "before": "var crack_angle := float(crack_index) * TAU / 3.0 + mine_progress * 5.0",
+    "after": "var crack_angle = float(crack_index) * TAU / 3.0 + mine_progress * 5.0"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1431,
+    "variable": "current_forward",
+    "before": "var current_forward := (target_position - player_position).dot(aim_direction)",
+    "after": "var current_forward = (target_position - player_position).dot(aim_direction)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1466,
+    "variable": "valid",
+    "before": "var valid := host._can_place_relocated_structure(relocation_target)",
+    "after": "var valid = host._can_place_relocated_structure(relocation_target)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1468,
+    "variable": "origin",
+    "before": "var origin := grid.cell_to_world(relocation_target) - Vector2.ONE * tile_size * 0.5",
+    "after": "var origin = grid.cell_to_world(relocation_target) - Vector2.ONE * tile_size * 0.5"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1470,
+    "variable": "center",
+    "before": "var center := origin + pixel_size * 0.5",
+    "after": "var center = origin + pixel_size * 0.5"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1493,
+    "variable": "texture_id",
+    "before": "var texture_id := host._crosshair_reticle_texture_id()",
+    "after": "var texture_id = host._crosshair_reticle_texture_id()"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1569,
+    "variable": "valid",
+    "before": "var valid := host._can_place_structure(build_target)",
+    "after": "var valid = host._can_place_structure(build_target)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1570,
+    "variable": "footprint",
+    "before": "var footprint := host._footprint_for_build(selected_build, build_orientation)",
+    "after": "var footprint = host._footprint_for_build(selected_build, build_orientation)"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1572,
+    "variable": "origin",
+    "before": "var origin := grid.cell_to_world(build_target) - Vector2.ONE * tile_size * 0.5",
+    "after": "var origin = grid.cell_to_world(build_target) - Vector2.ONE * tile_size * 0.5"
+  },
+  {
+    "file": "systems/run_components/run_actor_presentation.gd",
+    "line": 1574,
+    "variable": "center",
+    "before": "var center := origin + pixel_size * 0.5",
+    "after": "var center = origin + pixel_size * 0.5"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 699,
+    "variable": "near_active_core",
+    "before": "var near_active_core := not nearby_base_id.is_empty() and base_network.get_status(nearby_base_id) == BaseNetworkScript.STATUS_ACTIVE",
+    "after": "var near_active_core = not nearby_base_id.is_empty() and base_network.get_status(nearby_base_id) == BaseNetworkScript.STATUS_ACTIVE"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 702,
+    "variable": "bases_under_attack",
+    "before": "var bases_under_attack := host._bases_under_attack_count()",
+    "after": "var bases_under_attack = host._bases_under_attack_count()"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 752,
+    "variable": "suit_target",
+    "before": "var suit_target := player_health",
+    "after": "var suit_target = player_health"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 758,
+    "variable": "energy_target",
+    "before": "var energy_target := sprint_energy",
+    "after": "var energy_target = sprint_energy"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 772,
+    "variable": "pack_used",
+    "before": "var pack_used := host._backpack_used()",
+    "after": "var pack_used = host._backpack_used()"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 823,
+    "variable": "sweep_t",
+    "before": "var sweep_t := 1.0 - (hud_level_up_flash / 0.65)",
+    "after": "var sweep_t = 1.0 - (hud_level_up_flash / 0.65)"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 825,
+    "variable": "sweep_x",
+    "before": "var sweep_x := left_panel.position.x + sweep_width * sweep_t",
+    "after": "var sweep_x = left_panel.position.x + sweep_width * sweep_t"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 834,
+    "variable": "sp_alpha",
+    "before": "var sp_alpha := 0.72 + sin(Time.get_ticks_msec() * 0.008) * 0.28 * hud_sp_pulse if hud_sp_pulse > 0.01 else 0.88",
+    "after": "var sp_alpha = 0.72 + sin(Time.get_ticks_msec() * 0.008) * 0.28 * hud_sp_pulse if hud_sp_pulse > 0.01 else 0.88"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 913,
+    "variable": "transition_alpha",
+    "before": "var transition_alpha := 1.0 - (hud_comms_transition / 0.33) * 0.55",
+    "after": "var transition_alpha = 1.0 - (hud_comms_transition / 0.33) * 0.55"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 937,
+    "variable": "aim",
+    "before": "var aim := aim_direction.normalized() if aim_direction.length_squared() > 0.01 else Vector2.RIGHT",
+    "after": "var aim = aim_direction.normalized() if aim_direction.length_squared() > 0.01 else Vector2.RIGHT"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 938,
+    "variable": "streak_anchor",
+    "before": "var streak_anchor := player_position - host._effective_camera_center() + VIEW_SIZE * 0.5 + aim * 22.0",
+    "after": "var streak_anchor = player_position - host._effective_camera_center() + VIEW_SIZE * 0.5 + aim * 22.0"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 957,
+    "variable": "carrier_count",
+    "before": "var carrier_count := host._active_brood_carrier_count()",
+    "after": "var carrier_count = host._active_brood_carrier_count()"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 1008,
+    "variable": "nearby_torch_index",
+    "before": "var nearby_torch_index := host._nearby_torch()",
+    "after": "var nearby_torch_index = host._nearby_torch()"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 1015,
+    "variable": "build_n",
+    "before": "var build_n := operator_loadout.build_slot_count() if operator_loadout else 5",
+    "after": "var build_n = operator_loadout.build_slot_count() if operator_loadout else 5"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 1019,
+    "variable": "glyph_texture_id",
+    "before": "var glyph_texture_id := host._hud_glyph_texture_id(glyph)",
+    "after": "var glyph_texture_id = host._hud_glyph_texture_id(glyph)"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 1061,
+    "variable": "cull_rect",
+    "before": "var cull_rect := host._lighting_cull_rect()",
+    "after": "var cull_rect = host._lighting_cull_rect()"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 1063,
+    "variable": "player_material_id",
+    "before": "var player_material_id := host._visual_material_id(grid.world_to_cell(player_position))",
+    "after": "var player_material_id = host._visual_material_id(grid.world_to_cell(player_position))"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 1069,
+    "variable": "base_position",
+    "before": "var base_position := grid.cell_to_world(record[\"cell\"])",
+    "after": "var base_position = grid.cell_to_world(record[\"cell\"])"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 1079,
+    "variable": "lane_position",
+    "before": "var lane_position := grid.cell_to_world(grid.spawn_cells[lane_index])",
+    "after": "var lane_position = grid.cell_to_world(grid.spawn_cells[lane_index])"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 1085,
+    "variable": "discovery_position",
+    "before": "var discovery_position := grid.cell_to_world(center)",
+    "after": "var discovery_position = grid.cell_to_world(center)"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 1151,
+    "variable": "lamp_position",
+    "before": "var lamp_position := grid.cell_to_world(prop[\"cell\"]) + Vector2(prop.get(\"offset\", Vector2.ZERO))",
+    "after": "var lamp_position = grid.cell_to_world(prop[\"cell\"]) + Vector2(prop.get(\"offset\", Vector2.ZERO))"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 1196,
+    "variable": "shadow_center",
+    "before": "var shadow_center := structure.position + (footprint - Vector2(grid.tile_size, grid.tile_size)) * 0.5 + Vector2(2, 4)",
+    "after": "var shadow_center = structure.position + (footprint - Vector2(grid.tile_size, grid.tile_size)) * 0.5 + Vector2(2, 4)"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 1213,
+    "variable": "sample_cell",
+    "before": "var sample_cell := grid.world_to_cell(Vector2(x + MOTE_SPACING * 0.5, y + MOTE_SPACING * 0.5))",
+    "after": "var sample_cell = grid.world_to_cell(Vector2(x + MOTE_SPACING * 0.5, y + MOTE_SPACING * 0.5))"
+  },
+  {
+    "file": "systems/run_components/run_hud_presentation.gd",
+    "line": 1216,
+    "variable": "material_id",
+    "before": "var material_id := host._visual_material_id(sample_cell)",
+    "after": "var material_id = host._visual_material_id(sample_cell)"
+  }
+]

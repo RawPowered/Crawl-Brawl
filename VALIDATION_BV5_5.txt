@@ -1,0 +1,30 @@
+Crawl Brawl BV5.5 static validation
+===================================
+Baseline: BV5-DEV007
+Baseline SHA256: d3dafa7d5018675bf3272fd2808fcf9b9e6fb5776b52141aa2933b1ebba77e48
+
+PASS - baseline uploaded ZIP SHA256 verified
+PASS - baseline function signatures preserved in phase0_run.gd
+PASS - baseline function signatures preserved in world_grid.gd
+PASS - baseline function signatures preserved in gameplay_telemetry.gd
+PASS - no duplicate functions in modified runtime scripts
+PASS - GDScript delimiter/lexical balance check across scripts/systems/tests
+PASS - EnVars/SysMap.xml parses
+PASS - EnVars/VarMap.xml parses
+PASS - MAX_RENDER_REGIONS = 24
+PASS - MAX_SIMULATION_REGIONS = 36
+PASS - MAX_SIMULATION_REGIONS aligned to MAX_FLOW_REGIONS = 36
+PASS - apply_render_window enforces its own cap
+PASS - legacy schedule_region_window uses bounded render + simulation halo
+PASS - sparse ensure_regions_around does not grant loaded/visited ownership
+PASS - over-budget active windows force sanitization even while stationary
+PASS - visual prop/formation builds require render-window ownership
+PASS - same-cell per-mob regional flow-step cache present
+PASS - cached flow-step reuse avoids repeated body-clearance scan
+PASS - flow-step build/reuse telemetry present
+PASS - enemy/streaming runtime phase telemetry present
+PASS - frame_budget_bv55_test.gd registered in regression batch
+PASS - SAVE_VERSION remains 14
+
+Automated static gates: 186 / 186 passed.
+Godot 4.7.1 executable is not available in this environment; local Launcher Validate Build + playtest remains the runtime gate.
