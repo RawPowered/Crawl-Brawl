@@ -22,6 +22,7 @@ tmp_frames/
 assets/art/debug_video_frames/
 assets/debug_video_frames/
 debug_video_frames/
+assets/showcase/*.import
 
 # Local settings, credentials, and generated project data
 .cursor/
