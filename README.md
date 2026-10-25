@@ -21,26 +21,13 @@ Digging changes the battlefield. Open a direct route for resources and you may a
 
 **Dig. Build. Survive.**
 
-## Gameplay in motion
+## Latest gameplay, full frame
 
-These captures use the August 13, 2026 gameplay build. They show the underground map, the expanded loadout, a brood-carrier warning, and a weapon response in the tunnels.
+This 10-second, 1080p gameplay reel comes from the August 13, 2026 development build. It moves from a defended Security Core through connected tunnel materials and into a fire-weapon encounter. The resource counter, pack, equipment bar, facility map, and defensive layout stay visible as play shifts between scenes.
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <p><strong>01 / TRACK THE BROOD CARRIER</strong></p>
-      <img src="assets/showcase/dig-build-survive.gif" width="100%" alt="Latest Crawl Brawl gameplay build showing the Security Core room, a brood-carrier warning, expanded equipment bar, and tracked facility map." />
-      <p><em>Read the facility map and act on an incoming brood-carrier warning.</em></p>
-    </td>
-    <td width="50%" valign="top">
-      <p><strong>02 / HOLD THE TUNNELS</strong></p>
-      <img src="assets/showcase/breach-response.gif" width="100%" alt="Latest Crawl Brawl gameplay build showing the player using a fire weapon in the tunnels, with loadout, resources, and facility map visible." />
-      <p><em>Switch weapons and meet the threat inside the underground network.</em></p>
-    </td>
-  </tr>
-</table>
+<p align="center"><img src="assets/showcase/latest-gameplay-1080p.gif" width="100%" alt="1080p Crawl Brawl gameplay reel showing the defended Security Core, live resource and inventory UI, connected underground materials, facility map, and a fire-weapon encounter." /></p>
 
-<p align="center"><strong>LATEST GAMEPLAY CAPTURE / AUGUST 13, 2026</strong><br />Footage from an active development build. Systems and presentation may change.</p>
+<p align="center"><strong>UIX / MATERIALS / BASE BUILDING / COMBAT</strong><br />Latest captured gameplay. Systems and presentation may change during development.</p>
 
 <table>
   <tr>
